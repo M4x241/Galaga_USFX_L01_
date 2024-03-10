@@ -3,6 +3,13 @@
 
 #include "NaveEnemigaNodriza.h"
 
+ANaveEnemigaNodriza::ANaveEnemigaNodriza()
+{
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Trim_90_Out.Shape_Trim_90_Out'"));
+
+	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
+}
+
 void ANaveEnemigaNodriza::Mover()
 {
 }

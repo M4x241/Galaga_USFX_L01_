@@ -16,6 +16,7 @@ class GALAGA_USFX_L01_API ANaveEnemigaReabastecimiento : public ANaveEnemiga
 private:
 	int capacidadAlmacenamiento;
 public:
+	ANaveEnemigaReabastecimiento();
 	FORCEINLINE int GetCapacidadAlmacenamiento() const { return capacidadAlmacenamiento; }
 
 	FORCEINLINE void SetCapacidadAlmacenamiento(int _capacidadAlmacenamiento) { capacidadAlmacenamiento = _capacidadAlmacenamiento; }

@@ -18,6 +18,7 @@ private:
 	float aumentoTamanio;
 
 public:
+	ANaveEnemigaNodriza();
 	FORCEINLINE int GetEscudo() const { return escudo; }
 	FORCEINLINE int GetAumentoTamanio() const { return aumentoTamanio; }
 

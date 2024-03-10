@@ -13,5 +13,7 @@ UCLASS()
 class GALAGA_USFX_L01_API ANaveEnemigaCazaAlfa : public ANaveEnemigaCaza
 {
 	GENERATED_BODY()
-	
+public:
+	ANaveEnemigaCazaAlfa();
+	virtual void Mover();
 };

@@ -16,6 +16,7 @@ class GALAGA_USFX_L01_API ANaveEnemigaEspia : public ANaveEnemiga
 private:
 	int rangoSondeo;
 public:
+	ANaveEnemigaEspia();
 	FORCEINLINE int GetRangoSondeo() const { return rangoSondeo; }
 
 	FORCEINLINE void SetRangoSonda(int _rangoSondeo) { rangoSondeo = _rangoSondeo; }
