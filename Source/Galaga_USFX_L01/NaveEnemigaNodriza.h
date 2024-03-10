@@ -7,7 +7,7 @@
 #include "NaveEnemigaNodriza.generated.h"
 
 /**
- * nodriza creadora, nodriza destructora
+ * nodriza madre, nodriza war algunos niveles sera de destruir a la nave creadora y en otras a la nave de guerra
  */
 UCLASS()
 class GALAGA_USFX_L01_API ANaveEnemigaNodriza : public ANaveEnemiga

@@ -40,10 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaNodriza() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANaveEnemigaNodriza_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * nodriza creadora, nodriza destructora\n */" },
+		{ "Comment", "/**\n * nodriza madre, nodriza war algunos niveles sera de destruir a la nave creadora y en otras a la nave de guerra\n */" },
 		{ "IncludePath", "NaveEnemigaNodriza.h" },
 		{ "ModuleRelativePath", "NaveEnemigaNodriza.h" },
-		{ "ToolTip", "nodriza creadora, nodriza destructora" },
+		{ "ToolTip", "nodriza madre, nodriza war algunos niveles sera de destruir a la nave creadora y en otras a la nave de guerra" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ANaveEnemigaNodriza_Statics::StaticCppClassTypeInfo = {
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaNodriza() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANaveEnemigaNodriza, 307560599);
+	IMPLEMENT_CLASS(ANaveEnemigaNodriza, 3909184388);
 	template<> GALAGA_USFX_L01_API UClass* StaticClass<ANaveEnemigaNodriza>()
 	{
 		return ANaveEnemigaNodriza::StaticClass();

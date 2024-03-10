@@ -40,9 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaEspia() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANaveEnemigaEspia_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * naves hijas, espia scout, iniciara la deteccion de nave, envia la posicion del jugador a la nave central\n */" },
 		{ "IncludePath", "NaveEnemigaEspia.h" },
 		{ "ModuleRelativePath", "NaveEnemigaEspia.h" },
+		{ "ToolTip", "naves hijas, espia scout, iniciara la deteccion de nave, envia la posicion del jugador a la nave central" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ANaveEnemigaEspia_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaEspia() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANaveEnemigaEspia, 1072109058);
+	IMPLEMENT_CLASS(ANaveEnemigaEspia, 3495043910);
 	template<> GALAGA_USFX_L01_API UClass* StaticClass<ANaveEnemigaEspia>()
 	{
 		return ANaveEnemigaEspia::StaticClass();
