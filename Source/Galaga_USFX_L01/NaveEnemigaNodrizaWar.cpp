@@ -3,3 +3,15 @@
 
 #include "NaveEnemigaNodrizaWar.h"
 
+
+void ANaveEnemigaNodrizaWar::Mover()
+{
+}
+
+void ANaveEnemigaNodrizaWar::Disparar()
+{
+}
+
+void ANaveEnemigaNodrizaWar::Destruirse()
+{
+}

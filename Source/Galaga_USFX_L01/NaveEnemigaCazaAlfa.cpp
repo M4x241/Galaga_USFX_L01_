@@ -9,8 +9,24 @@ ANaveEnemigaCazaAlfa::ANaveEnemigaCazaAlfa()
 	//// Create the mesh component
 	//mallaNaveEnemiga = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
+
+	//habilitamos el tick
+	PrimaryActorTick.bCanEverTick = true;
 }
 
 void ANaveEnemigaCazaAlfa::Mover()
+{
+}
+ 
+
+void ANaveEnemigaCazaAlfa::Disparar()
+{
+}
+
+void ANaveEnemigaCazaAlfa::Destruirse()
+{
+}
+
+void ANaveEnemigaCazaAlfa::Escapar()
 {
 }

@@ -16,4 +16,7 @@ class GALAGA_USFX_L01_API ANaveEnemigaCazaAlfa : public ANaveEnemigaCaza
 public:
 	ANaveEnemigaCazaAlfa();
 	virtual void Mover();
+	virtual void Disparar();
+	virtual void Destruirse();
+	virtual void Escapar();
 };

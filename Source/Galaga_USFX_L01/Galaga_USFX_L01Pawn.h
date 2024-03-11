@@ -23,6 +23,16 @@ class AGalaga_USFX_L01Pawn : public APawn
 	UPROPERTY(Category = Camera, VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
 
+	//AGREGANDO SACAR VALOR DE LA POSICON
+	/*
+public:
+	FVector posicionNave = GetActorLocation();
+
+public:
+	FORCEINLINE FVector GetPosicionNaveX() const { return posicionNave; }
+
+	//===========================
+	*/
 public:
 	AGalaga_USFX_L01Pawn();
 

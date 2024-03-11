@@ -2,4 +2,9 @@
 
 
 #include "NaveEnemigaSenuelo.h"
+#include "Galaga_USFX_L01Pawn.h"
 
+void ANaveEnemigaSenuelo::Mover()
+{
+	
+}

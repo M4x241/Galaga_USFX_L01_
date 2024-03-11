@@ -13,5 +13,7 @@ UCLASS()
 class GALAGA_USFX_L01_API ANaveEnemigaEspiaScout : public ANaveEnemigaEspia
 {
 	GENERATED_BODY()
-	
+protected:
+	virtual void Mover();
+	virtual void Escapar();
 };

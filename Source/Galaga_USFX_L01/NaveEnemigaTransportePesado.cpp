@@ -3,3 +3,14 @@
 
 #include "NaveEnemigaTransportePesado.h"
 
+void ANaveEnemigaTransportePesado::Mover()
+{
+}
+
+void ANaveEnemigaTransportePesado::Destruirse()
+{
+}
+
+void ANaveEnemigaTransportePesado::Escapar()
+{
+}

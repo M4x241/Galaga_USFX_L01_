@@ -3,3 +3,11 @@
 
 #include "NaveEnemigaEspiaCentral.h"
 
+
+void ANaveEnemigaEspiaCentral::Mover()
+{
+}
+
+void ANaveEnemigaEspiaCentral::Escapar()
+{
+}

@@ -3,3 +3,15 @@
 
 #include "NaveEnemigaNodrizaMadre.h"
 
+
+void ANaveEnemigaNodrizaMadre::Mover()
+{
+}
+
+void ANaveEnemigaNodrizaMadre::Disparar()
+{
+}
+
+void ANaveEnemigaNodrizaMadre::Destruirse()
+{
+}

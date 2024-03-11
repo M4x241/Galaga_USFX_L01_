@@ -7,7 +7,7 @@
 #include "Galaga_USFX_L01GameMode.generated.h"
 
 //============INPOORTAMOS la nave enemiga
-//no se que cambiuo
+class ANaveEnemigaCaza;
 class ANaveEnemigaCazaAlfa;
 class ANaveEnemigaCazaDelta;
 class ANaveEnemigaTransporteLigero;
@@ -35,8 +35,8 @@ public:
 
 public:
 	//ANaveEnemigaTransporte* NaveEnemigaTransporte01;
-	//ANaveEnemigaCaza* NaveEnemigaCaza01;
-
+	ANaveEnemigaCaza* NaveEnemigaCaza01;
+	
 	ANaveEnemigaCazaAlfa* NaveEnemigaCazaAlfa01;
 	ANaveEnemigaCazaDelta* NaveEnemigaCazaDelta01;
 	ANaveEnemigaTransporteLigero* NaveEnemigaTransporteLigero01;

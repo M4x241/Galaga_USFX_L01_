@@ -18,4 +18,6 @@ private:
 public:
 	FORCEINLINE bool GetEscudo() const { return escudo; }
 	FORCEINLINE void SetEscudo(bool _escudo) { escudo = _escudo; }
+protected:
+	
 };

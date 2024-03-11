@@ -3,3 +3,15 @@
 
 #include "NaveEnemigaReabastecimientoBombs.h"
 
+
+void ANaveEnemigaReabastecimientoBombs::Mover()
+{
+}
+
+void ANaveEnemigaReabastecimientoBombs::Destruirse()
+{
+}
+
+void ANaveEnemigaReabastecimientoBombs::Escapar()
+{
+}

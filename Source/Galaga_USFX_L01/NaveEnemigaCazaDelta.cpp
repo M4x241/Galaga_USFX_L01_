@@ -14,3 +14,15 @@ ANaveEnemigaCazaDelta::ANaveEnemigaCazaDelta()
 void ANaveEnemigaCazaDelta::Mover()
 {
 }
+
+void ANaveEnemigaCazaDelta::Disparar()
+{
+}
+
+void ANaveEnemigaCazaDelta::Destruirse()
+{
+}
+
+void ANaveEnemigaCazaDelta::Escapar()
+{
+}

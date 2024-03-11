@@ -48,7 +48,7 @@ void AGalaga_USFX_L01GameMode::BeginPlay()
 	if (World != nullptr)
 	{
 		// spawn the projectile
-		//NaveEnemigaCaza01 = World->SpawnActor<ANaveEnemigaCaza>(ubicacionNave01, rotacionNave); 
+		NaveEnemigaCaza01 = World->SpawnActor<ANaveEnemigaCaza>(FVector(200,200,250), rotacionNave);
 		NaveEnemigaCazaAlfa01 = World->SpawnActor<ANaveEnemigaCazaAlfa>(ubicacionNave01, rotacionNave); 
 		NaveEnemigaCazaDelta01 = World->SpawnActor<ANaveEnemigaCazaDelta>(ubicacionNave02, rotacionNave);
 		NaveEnemigaTransporteLigero01 = World->SpawnActor<ANaveEnemigaTransporteLigero>(ubicacionNave03, rotacionNave);

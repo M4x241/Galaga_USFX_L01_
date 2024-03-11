@@ -13,5 +13,8 @@ UCLASS()
 class GALAGA_USFX_L01_API ANaveEnemigaReabastecimientoFuel : public ANaveEnemigaReabastecimiento
 {
 	GENERATED_BODY()
-	
+protected:
+	virtual void Mover();
+	virtual void Destruirse();
+	virtual void Escapar();
 };

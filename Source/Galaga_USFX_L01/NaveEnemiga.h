@@ -17,7 +17,7 @@ public:
 	UStaticMeshComponent* mallaNaveEnemiga;
 
 
-private:
+protected:
 	
 	float stamina;
 	float speed;
