@@ -13,29 +13,21 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
     PrimaryActorTick.bCanEverTick = true;
 }
 
-void ANaveEnemigaCaza::Mover()
+void ANaveEnemigaCaza::Tick(float DeltaTime)
 {
-    /*  
-	Super::SetPosicion(FVector(GetPosicion().X - speed, GetPosicion().Y, GetPosicion().Z));
+	Super::Tick(DeltaTime);
+	Mover(DeltaTime);
+}
 
-	if (Super::GetPosicion().X == -1600.0f) {
-		SetPosicion(FVector(200, 200, 250));
-	} */
+void ANaveEnemigaCaza::Mover(float DeltaTime)
+{
+	
+	SetActorLocation(FVector(GetActorLocation().X - 1, GetActorLocation().Y, GetActorLocation().Z));
 
-    // Obtener la posición actual de la nave
-    FVector PosicionActual = Super::GetPosicion();
-
-    // Mover la nave restando la velocidad de la coordenada X
-    FVector NuevaPosicion = FVector(PosicionActual.X - speed, PosicionActual.Y, PosicionActual.Z);
-
-    // Establecer la nueva posición de la nave
-    Super::SetPosicion(NuevaPosicion);
-
-    // Verificar si la posición X ha alcanzado un cierto valor
-    if (NuevaPosicion.X == -1600.0f) {
-        // Si es así, reubicar la nave
-        Super::SetPosicion(FVector(200, 200, 250));
-    }
+	//if (Super::GetPosicion().X == -1600.0f) {
+	//	SetPosicion(FVector(200, 200, 250)); 
+	//} 
+    
 }
 
 void ANaveEnemigaCaza::Disparar()
