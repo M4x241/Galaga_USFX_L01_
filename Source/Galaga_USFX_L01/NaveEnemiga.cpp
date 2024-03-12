@@ -14,8 +14,6 @@ ANaveEnemiga::ANaveEnemiga()
 	//static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cone.Shape_Cone'"));
 	// Create the mesh component 
 	mallaNaveEnemiga = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
-	//NaveEnemigaMesh->SetCollisionProfileName(UCollisionProfile::Pawn_ProfileName);
-	//NaveEnemigaMesh->SetStaticMesh(ShipMesh.Object);
 	mallaNaveEnemiga->SetupAttachment(RootComponent);
 	RootComponent = mallaNaveEnemiga;
 
@@ -32,8 +30,7 @@ void ANaveEnemiga::BeginPlay()
 // Called every frame
 void ANaveEnemiga::Tick(float DeltaTime)
 {
-	Super::Tick(DeltaTime);
-	//Mover(); 
+	Super::Tick(DeltaTime); 
 
 }
 

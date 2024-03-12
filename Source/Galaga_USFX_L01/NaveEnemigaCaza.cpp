@@ -20,9 +20,9 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 }
 
 void ANaveEnemigaCaza::Mover(float DeltaTime)
-{
-	
-	SetActorLocation(FVector(GetActorLocation().X - 1, GetActorLocation().Y, GetActorLocation().Z));
+{ 
+	speed = 1; 
+	SetActorLocation(FVector(GetActorLocation().X - speed, GetActorLocation().Y, GetActorLocation().Z)); 
 
 	//if (Super::GetPosicion().X == -1600.0f) {
 	//	SetPosicion(FVector(200, 200, 250)); 
@@ -41,10 +41,3 @@ void ANaveEnemigaCaza::Destruirse()
 void ANaveEnemigaCaza::Escapar()
 {
 }
-/*
-void ANaveEnemigaCaza::Tick(float DeltaTime)
-{
-    Super::Tick(DeltaTime);
-    Mover(); 
-
-}*/

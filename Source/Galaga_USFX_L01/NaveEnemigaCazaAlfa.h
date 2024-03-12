@@ -13,9 +13,12 @@ UCLASS()
 class GALAGA_USFX_L01_API ANaveEnemigaCazaAlfa : public ANaveEnemigaCaza
 {
 	GENERATED_BODY()
+private:
+	int bandera=1;
 public:
+	virtual void Tick(float DeltaTime) override;
 	ANaveEnemigaCazaAlfa();
-	virtual void Mover();
+	virtual void Mover(float DeltaTime) override;
 	virtual void Disparar();
 	virtual void Destruirse();
 	virtual void Escapar();

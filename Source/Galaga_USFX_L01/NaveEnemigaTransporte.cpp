@@ -9,8 +9,16 @@ ANaveEnemigaTransporte::ANaveEnemigaTransporte()
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 }
 
-void ANaveEnemigaTransporte::Mover()
+void ANaveEnemigaTransporte::Tick(float DeltaTime)
 {
+	Super::Tick(DeltaTime);
+	Mover(DeltaTime);
+}
+
+void ANaveEnemigaTransporte::Mover(float DeltaTime)
+{
+	speed = 1;
+	SetActorLocation(FVector(GetActorLocation().X - speed, GetActorLocation().Y, GetActorLocation().Z));
 }
 
 void ANaveEnemigaTransporte::Destruirse()
