@@ -13,8 +13,10 @@ UCLASS()
 class GALAGA_USFX_L01_API ANaveEnemigaTransportePesado : public ANaveEnemigaTransporte
 {
 	GENERATED_BODY()
+public:
+	virtual void Tick(float DeltaTime) override;
 protected:
-	virtual void Mover();
+	virtual void Mover(float DeltaTime) override;
 	virtual void Destruirse();
 	virtual void Escapar();
 	

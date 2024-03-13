@@ -11,8 +11,16 @@ ANaveEnemigaEspia::ANaveEnemigaEspia()
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 }
 
-void ANaveEnemigaEspia::Mover()
+void ANaveEnemigaEspia::Tick(float DeltaTime)
 {
+	Super::Tick(DeltaTime);
+	Mover(DeltaTime);
+}
+
+void ANaveEnemigaEspia::Mover(float DeltaTime)
+{
+	speed = -3;
+	SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z));
 }
 
 void ANaveEnemigaEspia::Escapar()

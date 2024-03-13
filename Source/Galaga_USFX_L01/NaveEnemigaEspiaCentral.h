@@ -13,7 +13,11 @@ UCLASS()
 class GALAGA_USFX_L01_API ANaveEnemigaEspiaCentral : public ANaveEnemigaEspia
 {
 	GENERATED_BODY()
+public:
+	int bandera = 1;
+public:
+	virtual void Tick(float DeltaTime) override;
 protected:
-	virtual void Mover();
+	virtual void Mover(float DeltaTime) override ;
 	virtual void Escapar();
 };

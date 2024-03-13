@@ -10,8 +10,15 @@ ANaveEnemigaNodriza::ANaveEnemigaNodriza()
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 }
 
-void ANaveEnemigaNodriza::Mover()
+void ANaveEnemigaNodriza::Tick(float DeltaTime)
 {
+	Super::Tick(DeltaTime);
+	Mover( DeltaTime);
+}
+
+void ANaveEnemigaNodriza::Mover(float DeltaTime)
+{
+	SetActorLocation(FVector(GetActorLocation().X , GetActorLocation().Y, GetActorLocation().Z));
 }
 
 void ANaveEnemigaNodriza::Disparar()

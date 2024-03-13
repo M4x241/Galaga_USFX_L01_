@@ -1,0 +1,25 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Galaga_USFX_L01-0291.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\Galaga_USFX_L01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaEspia.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaEspiaCentral.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaEspiaScout.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaReabastecimiento.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaReabastecimientoBombs.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaReabastecimientoFuel.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaTransporte.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaTransportePesado.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\Module.Galaga_USFX_L01.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\Galaga_USFX_L01.init.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaReabastecimiento.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaReabastecimientoBombs.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaReabastecimientoFuel.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\Module.Galaga_USFX_L01.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\Default.rc2.res"
+/OUT:"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\UE4Editor-Galaga_USFX_L01-0291.lib"

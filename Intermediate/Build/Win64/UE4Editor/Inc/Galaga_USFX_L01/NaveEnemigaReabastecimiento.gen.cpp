@@ -40,10 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaReabastecimiento() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANaveEnemigaReabastecimiento_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * clases hijas abastecimiento de bombas y de combustible;\n */" },
 		{ "IncludePath", "NaveEnemigaReabastecimiento.h" },
 		{ "ModuleRelativePath", "NaveEnemigaReabastecimiento.h" },
-		{ "ToolTip", "clases hijas abastecimiento de bombas y de combustible;" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ANaveEnemigaReabastecimiento_Statics::StaticCppClassTypeInfo = {
@@ -73,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaReabastecimiento() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANaveEnemigaReabastecimiento, 3441697883);
+	IMPLEMENT_CLASS(ANaveEnemigaReabastecimiento, 2504079151);
 	template<> GALAGA_USFX_L01_API UClass* StaticClass<ANaveEnemigaReabastecimiento>()
 	{
 		return ANaveEnemigaReabastecimiento::StaticClass();

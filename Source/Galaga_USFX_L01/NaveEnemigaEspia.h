@@ -19,10 +19,11 @@ public:
 	ANaveEnemigaEspia();
 	FORCEINLINE int GetRangoSondeo() const { return rangoSondeo; }
 
-	FORCEINLINE void SetRangoSonda(int _rangoSondeo) { rangoSondeo = _rangoSondeo; }
+	FORCEINLINE void SetRangoSondeo(int _rangoSondeo) { rangoSondeo = _rangoSondeo; }
+	virtual void Tick(float DeltaTime) override;
 	
 protected:
-	virtual void Mover();
+	virtual void Mover(float DeltaTime);
 	//virtual void Disparar();
 	//virtual void Destruirse();
 	virtual void Escapar();

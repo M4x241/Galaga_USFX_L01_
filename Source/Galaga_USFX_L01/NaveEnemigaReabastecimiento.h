@@ -6,24 +6,23 @@
 #include "NaveEnemiga.h"
 #include "NaveEnemigaReabastecimiento.generated.h"
 
-/**
- * clases hijas abastecimiento de bombas y de combustible;
- */
+
 UCLASS()
 class GALAGA_USFX_L01_API ANaveEnemigaReabastecimiento : public ANaveEnemiga
 {
 	GENERATED_BODY()
 private:
-	int capacidadAlmacenamiento;
+	int capacidadAlmacenamiento=0;
 public:
 	ANaveEnemigaReabastecimiento();
 	FORCEINLINE int GetCapacidadAlmacenamiento() const { return capacidadAlmacenamiento; }
 
 	FORCEINLINE void SetCapacidadAlmacenamiento(int _capacidadAlmacenamiento) { capacidadAlmacenamiento = _capacidadAlmacenamiento; }
+	virtual void Tick(float DeltaTime) override;
 
 protected:
-	virtual void Mover();
-	//virtual void Disparar();
+	virtual void Mover(float DeltaTime);
+	virtual void Disparar(); //los transportistas no dispararan
 	virtual void Destruirse();
 	virtual void Escapar();
 	

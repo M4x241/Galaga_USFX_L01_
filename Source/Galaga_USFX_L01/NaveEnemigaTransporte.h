@@ -23,12 +23,11 @@ public:
 
 	FORCEINLINE void SetCapacidadCargaPeso(float _capacidadCargaPeso) { capacidadCargaPeso = _capacidadCargaPeso; }
 	FORCEINLINE void SetCapacidadCargaVolumen(float _capacidadCargaVolumen) { capacidadCargaVolumen = _capacidadCargaVolumen; }
-	virtual void Tick(float DeltaTime);
+	virtual void Tick(float DeltaTime) override;
 
-protected:
-	
+protected:	
 	virtual void Mover(float DeltaTime);
-	//virtual void Disparar(); los transportistas no dispararan
+	virtual void Disparar(); //los transportistas no dispararan
 	virtual void Destruirse();
 	virtual void Escapar();
 

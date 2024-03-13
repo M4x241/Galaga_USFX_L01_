@@ -9,7 +9,19 @@ ANaveEnemigaReabastecimiento::ANaveEnemigaReabastecimiento()
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 }
 
-void ANaveEnemigaReabastecimiento::Mover()
+void ANaveEnemigaReabastecimiento::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	Mover(DeltaTime);
+}
+
+void ANaveEnemigaReabastecimiento::Mover(float DeltaTime)
+{
+	speed = 1;
+	SetActorLocation(FVector(GetActorLocation().X - speed, GetActorLocation().Y, GetActorLocation().Z));
+}
+
+void ANaveEnemigaReabastecimiento::Disparar()
 {
 }
 

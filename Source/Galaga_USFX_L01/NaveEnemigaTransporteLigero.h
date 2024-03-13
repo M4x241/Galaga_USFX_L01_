@@ -13,8 +13,14 @@ UCLASS()
 class GALAGA_USFX_L01_API ANaveEnemigaTransporteLigero : public ANaveEnemigaTransporte
 {
 	GENERATED_BODY()
+public:
+	UPROPERTY(VisibleAnywhere)
+	int aleX;
+	int aleY;
+	int ban = 51;
+	virtual void Tick(float DeltaTime)override;
 protected:
-	virtual void Mover();
+	virtual void Mover(float DeltaTime)override;
 	virtual void Destruirse();
 	virtual void Escapar();
 	

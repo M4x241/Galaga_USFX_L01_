@@ -24,15 +24,16 @@ class AGalaga_USFX_L01Pawn : public APawn
 	class USpringArmComponent* CameraBoom;
 
 	//AGREGANDO SACAR VALOR DE LA POSICON
-	/*
+	
 public:
-	FVector posicionNave = GetActorLocation();
 
+	FVector posicionNave = GetActorLocation();
+	
 public:
-	FORCEINLINE FVector GetPosicionNaveX() const { return posicionNave; }
+	FORCEINLINE FVector GetPosicionNave() const { return posicionNave; }
 
 	//===========================
-	*/
+	
 public:
 	AGalaga_USFX_L01Pawn();
 

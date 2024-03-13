@@ -13,8 +13,12 @@ UCLASS()
 class GALAGA_USFX_L01_API ANaveEnemigaReabastecimientoBombs : public ANaveEnemigaReabastecimiento
 {
 	GENERATED_BODY()
+private:
+	float bandera = 1;
+public:
+	virtual void Tick(float DeltaTime) override;
 protected:
-	virtual void Mover();
+	virtual void Mover(float DeltaTime) override;
 	virtual void Destruirse();
 	virtual void Escapar();
 };

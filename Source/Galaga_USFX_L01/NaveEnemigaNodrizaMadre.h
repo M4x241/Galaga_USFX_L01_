@@ -13,8 +13,13 @@ UCLASS()
 class GALAGA_USFX_L01_API ANaveEnemigaNodrizaMadre : public ANaveEnemigaNodriza
 {
 	GENERATED_BODY()
+public:
+	UPROPERTY( VisibleAnywhere)
+	int posicionale;
+	bool ban = 1;
+	virtual void Tick(float DeltaTime)override;
 protected:
-	virtual void Mover();
+	virtual void Mover(float DeltaTime)override;
 	virtual void Disparar();
 	virtual void Destruirse();
 };

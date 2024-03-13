@@ -24,9 +24,10 @@ public:
 
 	FORCEINLINE void SetEscudo(int _escudo) { escudo = _escudo; }
 	FORCEINLINE void SetAumentoTamanio(int _aumentoTamanio) { aumentoTamanio = _aumentoTamanio; }
+	virtual void Tick(float DeltaTime)override;
 
 protected:
-	virtual void Mover();
+	virtual void Mover(float DeltaTime);
 	virtual void Disparar();
 	virtual void Destruirse();
 	//virtual void Escapar();

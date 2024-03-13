@@ -82,6 +82,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 protected:
 	//virtual void Mover()=0;
+
 	void Mover(float DeltaTime) PURE_VIRTUAL(ANaveEnemiga::Mover, );
 	void Disparar() PURE_VIRTUAL(ANaveEnemiga::Disparar, );
 	void Destruirse() PURE_VIRTUAL(ANaveEnemiga::Destruirse, );

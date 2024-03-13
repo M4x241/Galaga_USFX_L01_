@@ -4,8 +4,28 @@
 #include "NaveEnemigaEspiaCentral.h"
 
 
-void ANaveEnemigaEspiaCentral::Mover()
+
+void ANaveEnemigaEspiaCentral::Tick(float DeltaTime)
 {
+	Super::Tick(DeltaTime);
+	Mover(DeltaTime);
+}
+
+void ANaveEnemigaEspiaCentral::Mover(float DeltaTime)
+{
+	ANaveEnemigaEspia::Mover(DeltaTime);
+	bandera++;
+	if (bandera<300 && bandera >0) {
+		
+		SetActorLocation(FVector(GetActorLocation().X + GetSpeed(), GetActorLocation().Y, GetActorLocation().Z));
+	}
+	else if(bandera>300){
+		bandera = -100;
+	}
+	else {
+		SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y + GetSpeed(), GetActorLocation().Z)); 
+	}
+	
 }
 
 void ANaveEnemigaEspiaCentral::Escapar()

@@ -21,6 +21,10 @@ void ANaveEnemigaTransporte::Mover(float DeltaTime)
 	SetActorLocation(FVector(GetActorLocation().X - speed, GetActorLocation().Y, GetActorLocation().Z));
 }
 
+void ANaveEnemigaTransporte::Disparar()
+{
+}
+
 void ANaveEnemigaTransporte::Destruirse()
 {
 }
