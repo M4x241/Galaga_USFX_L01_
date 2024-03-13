@@ -14,12 +14,12 @@ class GALAGA_USFX_L01_API ANaveEnemigaCaza : public ANaveEnemiga
 {
 	GENERATED_BODY()
 private:
-	int cantidadBombas;
+	int tipoArma;
 
 public:
 	ANaveEnemigaCaza();
-	FORCEINLINE int GetCantidadBombas()const { return cantidadBombas; }
-	FORCEINLINE void SetCantidadBombas(int _cantidadBombas) { cantidadBombas = _cantidadBombas; }
+	FORCEINLINE int GetTipoArma()const { return tipoArma; }
+	FORCEINLINE void SetTipoArma(int _tipoArma) { tipoArma = _tipoArma; } 
 
 	virtual void Tick(float DeltaTime) override;
 

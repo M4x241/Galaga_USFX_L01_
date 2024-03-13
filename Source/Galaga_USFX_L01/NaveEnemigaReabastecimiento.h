@@ -12,12 +12,12 @@ class GALAGA_USFX_L01_API ANaveEnemigaReabastecimiento : public ANaveEnemiga
 {
 	GENERATED_BODY()
 private:
-	int capacidadAlmacenamiento=0;
+	bool almacenamientovacio=false;
 public:
 	ANaveEnemigaReabastecimiento();
-	FORCEINLINE int GetCapacidadAlmacenamiento() const { return capacidadAlmacenamiento; }
+	FORCEINLINE bool GetAlmacenamientoVacio() const { return almacenamientovacio; }
 
-	FORCEINLINE void SetCapacidadAlmacenamiento(int _capacidadAlmacenamiento) { capacidadAlmacenamiento = _capacidadAlmacenamiento; }
+	FORCEINLINE void SetAlmacenamientoVacio(bool _almacenamientovacio) { almacenamientovacio = _almacenamientovacio; }
 	virtual void Tick(float DeltaTime) override;
 
 protected:

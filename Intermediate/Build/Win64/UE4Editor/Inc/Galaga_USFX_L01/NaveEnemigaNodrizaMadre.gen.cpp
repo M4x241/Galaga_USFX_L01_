@@ -56,7 +56,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaNodrizaMadre() {}
 		{ "ModuleRelativePath", "NaveEnemigaNodrizaMadre.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ANaveEnemigaNodrizaMadre_Statics::NewProp_posicionale = { "posicionale", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANaveEnemigaNodrizaMadre, posicionale), METADATA_PARAMS(Z_Construct_UClass_ANaveEnemigaNodrizaMadre_Statics::NewProp_posicionale_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANaveEnemigaNodrizaMadre_Statics::NewProp_posicionale_MetaData)) };
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ANaveEnemigaNodrizaMadre_Statics::NewProp_posicionale = { "posicionale", nullptr, (EPropertyFlags)0x0040000000020001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANaveEnemigaNodrizaMadre, posicionale), METADATA_PARAMS(Z_Construct_UClass_ANaveEnemigaNodrizaMadre_Statics::NewProp_posicionale_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANaveEnemigaNodrizaMadre_Statics::NewProp_posicionale_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANaveEnemigaNodrizaMadre_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANaveEnemigaNodrizaMadre_Statics::NewProp_posicionale,
 	};
@@ -87,7 +87,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaNodrizaMadre() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANaveEnemigaNodrizaMadre, 2442790576);
+	IMPLEMENT_CLASS(ANaveEnemigaNodrizaMadre, 635393106);
 	template<> GALAGA_USFX_L01_API UClass* StaticClass<ANaveEnemigaNodrizaMadre>()
 	{
 		return ANaveEnemigaNodrizaMadre::StaticClass();

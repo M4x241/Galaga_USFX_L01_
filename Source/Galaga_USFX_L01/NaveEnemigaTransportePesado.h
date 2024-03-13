@@ -13,8 +13,13 @@ UCLASS()
 class GALAGA_USFX_L01_API ANaveEnemigaTransportePesado : public ANaveEnemigaTransporte
 {
 	GENERATED_BODY()
+private:
+	int blindaje;
 public:
 	virtual void Tick(float DeltaTime) override;
+	FORCEINLINE int GetBlindaje() const { return blindaje; }
+
+	FORCEINLINE void SetBlindaje(int _blindaje) { blindaje = _blindaje; }
 protected:
 	virtual void Mover(float DeltaTime) override;
 	virtual void Destruirse();

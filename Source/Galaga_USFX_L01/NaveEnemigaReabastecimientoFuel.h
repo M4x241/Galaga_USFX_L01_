@@ -14,9 +14,13 @@ class GALAGA_USFX_L01_API ANaveEnemigaReabastecimientoFuel : public ANaveEnemiga
 {
 	GENERATED_BODY()
 public:
+	int VolumenCombustible;
 	int bandera = 1;
 public:
 	virtual void Tick(float DeltaTime) override;
+	FORCEINLINE int GetVolumenCombustible() const { return VolumenCombustible; }
+
+	FORCEINLINE void SetVolumenCombustible(int _VolumenCombustible) { VolumenCombustible = _VolumenCombustible; }
 protected:
 	virtual void Mover(float DeltaTime) override;
 	virtual void Destruirse();

@@ -60,7 +60,10 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANaveEnemigaTransporteLigero)
 
 
-#define Galaga_USFX_L01_Source_Galaga_USFX_L01_NaveEnemigaTransporteLigero_h_15_PRIVATE_PROPERTY_OFFSET
+#define Galaga_USFX_L01_Source_Galaga_USFX_L01_NaveEnemigaTransporteLigero_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__aleX() { return STRUCT_OFFSET(ANaveEnemigaTransporteLigero, aleX); }
+
+
 #define Galaga_USFX_L01_Source_Galaga_USFX_L01_NaveEnemigaTransporteLigero_h_12_PROLOG
 #define Galaga_USFX_L01_Source_Galaga_USFX_L01_NaveEnemigaTransporteLigero_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

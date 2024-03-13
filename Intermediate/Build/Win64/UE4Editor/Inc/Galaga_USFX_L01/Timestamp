@@ -1,4 +1,4 @@
-C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Escenario.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Evento.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Galaga_USFX_L01GameMode.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Logros.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\MyNaveEnemigaEspiaScout.h
@@ -10,7 +10,6 @@ C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaEscolta.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaEspia.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaEspiaCentral.h
-C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaEspiaScout.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaFantasma.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaGeneral.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaNodriza.h
@@ -18,16 +17,17 @@ C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaNodrizaWar.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaReabastecimiento.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaReabastecimientoBombs.h
-C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaReabastecimientoFuel.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Escenario.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\HighScore.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaSenuelo.h
-C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaTransporte.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaReabastecimientoFuel.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaTransporteLigero.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaTransportePesado.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NavesRestantes.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\PlayerScore.h
-C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaTransporteLigero.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\ProyectilAmigo.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\ProyectilEnemigo.h
-C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Evento.h
-C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Galaga_USFX_L01Projectile.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaTransporte.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaEspiaScout.h
 C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Galaga_USFX_L01Pawn.h
-C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\HighScore.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Galaga_USFX_L01Projectile.h

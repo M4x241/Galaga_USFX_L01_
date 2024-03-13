@@ -13,12 +13,17 @@ UCLASS()
 class GALAGA_USFX_L01_API ANaveEnemigaTransporteLigero : public ANaveEnemigaTransporte
 {
 	GENERATED_BODY()
-public:
+private:
+	bool dispersion;
 	UPROPERTY(VisibleAnywhere)
 	int aleX;
 	int aleY;
 	int ban = 51;
+public:
 	virtual void Tick(float DeltaTime)override;
+	FORCEINLINE bool GetBlindaje() const { return dispersion; }
+
+	FORCEINLINE void SetBlindaje(bool _dispersion) { dispersion = _dispersion; }
 protected:
 	virtual void Mover(float DeltaTime)override;
 	virtual void Destruirse();

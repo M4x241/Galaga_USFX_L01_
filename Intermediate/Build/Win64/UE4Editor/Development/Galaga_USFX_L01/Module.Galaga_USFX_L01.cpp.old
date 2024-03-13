@@ -16,7 +16,6 @@
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaFantasma.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaGeneral.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaSenuelo.cpp"
-#include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaTransporteLigero.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NavesRestantes.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/PlayerScore.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/ProyectilAmigo.cpp"

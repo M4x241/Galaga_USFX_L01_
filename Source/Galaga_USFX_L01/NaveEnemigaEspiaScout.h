@@ -14,8 +14,12 @@ class GALAGA_USFX_L01_API ANaveEnemigaEspiaScout : public ANaveEnemigaEspia
 {
 	GENERATED_BODY()
 public:
+	bool naveEncontrada=false;
 	int bandera;
 public:
+	FORCEINLINE bool GetNaveEncontrada() const { return naveEncontrada; }
+
+	FORCEINLINE void SetNaveEncontrada(bool _naveEncontrada) { naveEncontrada = _naveEncontrada; }
 	virtual void Tick(float DeltaTime)override;
 protected:
 	virtual void Mover(float DeltaTime)override;

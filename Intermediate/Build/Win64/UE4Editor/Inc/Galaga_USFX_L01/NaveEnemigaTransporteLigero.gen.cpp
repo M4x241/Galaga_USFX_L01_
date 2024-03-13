@@ -56,7 +56,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaTransporteLigero() {}
 		{ "ModuleRelativePath", "NaveEnemigaTransporteLigero.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ANaveEnemigaTransporteLigero_Statics::NewProp_aleX = { "aleX", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANaveEnemigaTransporteLigero, aleX), METADATA_PARAMS(Z_Construct_UClass_ANaveEnemigaTransporteLigero_Statics::NewProp_aleX_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANaveEnemigaTransporteLigero_Statics::NewProp_aleX_MetaData)) };
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ANaveEnemigaTransporteLigero_Statics::NewProp_aleX = { "aleX", nullptr, (EPropertyFlags)0x0040000000020001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANaveEnemigaTransporteLigero, aleX), METADATA_PARAMS(Z_Construct_UClass_ANaveEnemigaTransporteLigero_Statics::NewProp_aleX_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANaveEnemigaTransporteLigero_Statics::NewProp_aleX_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANaveEnemigaTransporteLigero_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANaveEnemigaTransporteLigero_Statics::NewProp_aleX,
 	};
@@ -87,7 +87,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaTransporteLigero() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANaveEnemigaTransporteLigero, 3598550000);
+	IMPLEMENT_CLASS(ANaveEnemigaTransporteLigero, 4187427158);
 	template<> GALAGA_USFX_L01_API UClass* StaticClass<ANaveEnemigaTransporteLigero>()
 	{
 		return ANaveEnemigaTransporteLigero::StaticClass();
