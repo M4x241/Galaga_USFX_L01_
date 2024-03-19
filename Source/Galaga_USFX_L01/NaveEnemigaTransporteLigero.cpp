@@ -14,7 +14,7 @@ void ANaveEnemigaTransporteLigero::Mover(float DeltaTime)
 {
 	ANaveEnemigaTransporte::Mover(DeltaTime);
 	ban++;
-	if (ban>50) {
+	if (ban>100) {
 		aleX = rand() % 1600;
 		aleY = rand() % 1600;
 		ban = 0;

@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemigaAcrobata() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANaveEnemigaAcrobata, 3926653056);
+	IMPLEMENT_CLASS(ANaveEnemigaAcrobata, 1097047185);
 	template<> GALAGA_USFX_L01_API UClass* StaticClass<ANaveEnemigaAcrobata>()
 	{
 		return ANaveEnemigaAcrobata::StaticClass();

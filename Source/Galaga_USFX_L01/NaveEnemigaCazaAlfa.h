@@ -15,7 +15,11 @@ class GALAGA_USFX_L01_API ANaveEnemigaCazaAlfa : public ANaveEnemigaCaza
 	GENERATED_BODY()
 private:
 	int cantidadBombas;
-	int bandera=1;
+	int vueltas=0;
+	UPROPERTY(VisibleAnywhere)
+	int banderaA=3;
+	UPROPERTY(VisibleAnywhere);
+	FVector posicionalfa;
 public:
 	virtual void Tick(float DeltaTime) override;
 	ANaveEnemigaCazaAlfa();

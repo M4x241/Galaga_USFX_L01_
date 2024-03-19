@@ -7,6 +7,7 @@ void ANaveEnemigaCazaDelta::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	Mover(DeltaTime);
+	//Destruirse();
 
 }
 
@@ -38,6 +39,9 @@ void ANaveEnemigaCazaDelta::Disparar()
 
 void ANaveEnemigaCazaDelta::Destruirse()
 {
+	if (GetActorLocation().X < -1000) {
+		Destroy();
+	}
 }
 
 void ANaveEnemigaCazaDelta::Escapar()

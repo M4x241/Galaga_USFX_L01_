@@ -25,6 +25,17 @@ void ALogros::MedallasActuales(int _level)
 }*/
 
 
+void ALogros::CalcularPuntaje(FString _name, int _cantidad)///MOSTRAR DESPUES EL INGE
+{
+	if (tablaPuntaje.Contains(_name)) {
+		tablaPuntaje[_name] += _cantidad;
+	}
+	else {
+		tablaPuntaje.Add(_name,_cantidad);
+	}
+}
+
+
 // Sets default values
 ALogros::ALogros()
 {
@@ -44,6 +55,6 @@ void ALogros::BeginPlay()
 void ALogros::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	//CalcularPuntaje(nam,can);
 }
 

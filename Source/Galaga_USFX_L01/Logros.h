@@ -14,6 +14,8 @@ private:
 
 	//enum Medallas { ONE, FIVE, TEEN, FIFTEEN, HUNDRED };
 	FVector posicion;
+	
+	TMap<FString, int> tablaPuntaje;
 	//Medallas tipoMedalla=ONE;
 public:
 	//getters
@@ -21,6 +23,8 @@ public:
 	
 	//setters
 	FORCEINLINE void SetPosicion(FVector _posicion) { posicion = _posicion; }
+
+	FORCEINLINE void CalcularPuntaje(FString, int);
 
 
 	//generar medallas;
@@ -37,6 +41,6 @@ protected:
 
 public:	
 	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	virtual void Tick(float DeltaTime)override;
 
 };

@@ -1,0 +1,43 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Galaga_USFX_L01-0112.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\Galaga_USFX_L01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\Galaga_USFX_L01GameMode.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemiga.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaCazaAlfa.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaCazaDelta.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaEspiaCentral.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaReabastecimientoBombs.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaTransporteLigero.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\Module.Galaga_USFX_L01.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\Galaga_USFX_L01.init.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\MyNaveEnemigaEspiaScout.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemiga.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaAcrobata.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaCaza.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaCazaAlfa.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaCazaDelta.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaEscolta.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaEspia.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaEspiaCentral.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaEspiaScout.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaFantasma.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaGeneral.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaNodriza.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaNodrizaMadre.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaNodrizaWar.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaReabastecimiento.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaReabastecimientoBombs.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaReabastecimientoFuel.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaSenuelo.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaTransporte.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaTransporteLigero.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\NaveEnemigaTransportePesado.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\Module.Galaga_USFX_L01.gen.cpp.obj"
+"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\Default.rc2.res"
+/OUT:"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\UE4Editor-Galaga_USFX_L01-0112.lib"

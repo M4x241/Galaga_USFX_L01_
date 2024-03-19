@@ -22,6 +22,7 @@ void ANaveEnemigaReabastecimientoBombs::Mover(float DeltaTime)
 	if (GetActorLocation().X < -1800) {
 		SetActorLocation(FVector(1200, -1000 + 600, 250.0f));
 	}
+
 }
 
 void ANaveEnemigaReabastecimientoBombs::Destruirse()

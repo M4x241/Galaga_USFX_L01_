@@ -7,7 +7,9 @@
 #include "Galaga_USFX_L01GameMode.generated.h"
 
 //============INPOORTAMOS la nave enemiga
+class ANaveEnemiga;
 class ANaveEnemigaCaza;
+class ANaveEnemigaTransporte;
 class ANaveEnemigaCazaAlfa;
 class ANaveEnemigaCazaDelta;
 class ANaveEnemigaTransporteLigero;
@@ -35,6 +37,13 @@ public:
 
 public:
 	//ANaveEnemigaTransporte* NaveEnemigaTransporte01;
+	TArray<ANaveEnemigaCaza*> TANaveEnemigaCaza;
+	TArray<ANaveEnemigaCazaAlfa*> TANaveEnemigaCazaAlfa;
+	TArray<ANaveEnemigaCazaDelta*> TANaveEnemigaCazaDelta;
+	TArray<ANaveEnemigaTransporte*> TANaveEnemigaTransporte;
+
+	TArray<ANaveEnemiga*> TANaveEnemigamix;
+
 	ANaveEnemigaCaza* NaveEnemigaCaza01;
 	
 	ANaveEnemigaCazaAlfa* NaveEnemigaCazaAlfa01;
@@ -47,9 +56,13 @@ public:
 	ANaveEnemigaReabastecimientoFuel* NaveEnemigaReabastecimientoFuel01;
 	ANaveEnemigaNodrizaMadre* NaveEnemigaNodrizaMadre01;
 	ANaveEnemigaNodrizaWar* NaveEnemigaNodrizaWar01;
+public:
+	virtual void Tick(float DeltaTime)override;
 	
 protected:
 	virtual void BeginPlay() override;
+private:
+	int TiempoTranscurrido;
 };
 
 

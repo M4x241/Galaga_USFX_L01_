@@ -58,7 +58,11 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANaveEnemigaCazaAlfa)
 
 
-#define Galaga_USFX_L01_Source_Galaga_USFX_L01_NaveEnemigaCazaAlfa_h_15_PRIVATE_PROPERTY_OFFSET
+#define Galaga_USFX_L01_Source_Galaga_USFX_L01_NaveEnemigaCazaAlfa_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__banderaA() { return STRUCT_OFFSET(ANaveEnemigaCazaAlfa, banderaA); } \
+	FORCEINLINE static uint32 __PPO__posicionalfa() { return STRUCT_OFFSET(ANaveEnemigaCazaAlfa, posicionalfa); }
+
+
 #define Galaga_USFX_L01_Source_Galaga_USFX_L01_NaveEnemigaCazaAlfa_h_12_PROLOG
 #define Galaga_USFX_L01_Source_Galaga_USFX_L01_NaveEnemigaCazaAlfa_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

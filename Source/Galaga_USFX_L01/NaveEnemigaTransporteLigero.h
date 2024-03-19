@@ -7,7 +7,7 @@
 #include "NaveEnemigaTransporteLigero.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class GALAGA_USFX_L01_API ANaveEnemigaTransporteLigero : public ANaveEnemigaTransporte

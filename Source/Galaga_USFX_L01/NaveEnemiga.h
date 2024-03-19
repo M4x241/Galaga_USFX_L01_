@@ -24,6 +24,7 @@ protected:
 	float damage;
 	FString name;
 	float shutTime;
+	UPROPERTY(VisibleAnywhere)
 	FVector posicion;
 	//enum trayectoria
 	int capacidadPasajeros;
