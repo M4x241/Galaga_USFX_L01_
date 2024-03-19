@@ -13,16 +13,16 @@ void ANaveEnemigaCazaDelta::Tick(float DeltaTime)
 
 ANaveEnemigaCazaDelta::ANaveEnemigaCazaDelta()
 {
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_TriPyramid.Shape_TriPyramid'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/Meshes/EnemyLevel3.EnemyLevel3'"));
 	//// Create the mesh component
 	//mallaNaveEnemiga = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
-	posicion = FVector(1200, -1000+200, 250);
 }
 
 void ANaveEnemigaCazaDelta::Mover(float DeltaTime)
 {
 	ANaveEnemigaCaza::Mover(DeltaTime);
+	SetActorRotation(FRotator(0, 180, 0));
 	speed = 3;
 	SetActorLocation(FVector(GetActorLocation().X - speed, GetActorLocation().Y + speed * bandera, GetActorLocation().Z));
 	if (GetActorLocation().Y < -1000 || GetActorLocation().Y > -600) {

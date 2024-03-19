@@ -3,44 +3,70 @@
 
 #include "Logros.h"
 
-/*
-void ALogros::MedallasActuales(int _level)
-{
-	if (_level % 100 == 0) {
-		tipoMedalla = HUNDRED;
-	}
-	else if (_level % 50 == 0) {
-		tipoMedalla = FIFTEEN;
 
-	}
-	else if (_level % 10 == 0) {
-		tipoMedalla = TEEN;
-	}
-	else if (_level % 5 == 0) {
-		tipoMedalla = FIVE;
+/*
+void ALogros::CalcularVida(FString _name, int _cantidad)///MOSTRAR DESPUES EL INGE
+{
+	if (tablavidas.Contains(_name)) {
+		tablavidas[_name] += _cantidad;
 	}
 	else {
-		tipoMedalla = ONE;
+		tablavidas.Add(_name,_cantidad);
 	}
 }*/
 
-
-void ALogros::CalcularPuntaje(FString _name, int _cantidad)///MOSTRAR DESPUES EL INGE
+void ALogros::InsertarVida(FString _name)
 {
-	if (tablaPuntaje.Contains(_name)) {
-		tablaPuntaje[_name] += _cantidad;
+	tablavidas[_name] += 1;
+}
+
+void ALogros::EliminarVida(FString _name)
+{
+	tablavidas[_name] -= 1;
+}
+
+void ALogros::ModificarVida(FString _name,int newvida)
+{
+	tablavidas[_name] = newvida;
+}
+
+void ALogros::ListarVida()
+{
+	Getcorazones();
+	Getescudos();
+}
+void ALogros::Getcorazones()
+{
+	int numvidas = tablavidas["corazon"];
+	FString VidasString = FString::FromInt(numvidas);
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("VIDAS: ") + VidasString);
+
+	if (temporizador == 1) {
+		GEngine->ClearOnScreenDebugMessages();
+		temporizador = 0;
 	}
-	else {
-		tablaPuntaje.Add(_name,_cantidad);
+}
+void ALogros::Getescudos()
+{
+	int numescudo = tablavidas["escudo"];
+	FString EscudoString = FString::FromInt(numescudo);
+	GEngine->AddOnScreenDebugMessage(-5, 10.0f, FColor::Blue, TEXT("ESCUDO: ") + EscudoString);
+
+	if (temporizador == 1) {
+		GEngine->ClearOnScreenDebugMessages();
+		temporizador = 0;
 	}
 }
 
 
 // Sets default values
+//constructor
 ALogros::ALogros()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	tablavidas.Add("corazon", 1);
+	tablavidas.Add("escudo", 0);
 
 }
 
@@ -56,5 +82,7 @@ void ALogros::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	//CalcularPuntaje(nam,can);
+	ListarVida();
+	temporizador++;
 }
 

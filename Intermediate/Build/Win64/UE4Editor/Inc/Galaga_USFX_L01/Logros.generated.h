@@ -58,7 +58,10 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ALogros)
 
 
-#define Galaga_USFX_L01_Source_Galaga_USFX_L01_Logros_h_12_PRIVATE_PROPERTY_OFFSET
+#define Galaga_USFX_L01_Source_Galaga_USFX_L01_Logros_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__tablavidas() { return STRUCT_OFFSET(ALogros, tablavidas); }
+
+
 #define Galaga_USFX_L01_Source_Galaga_USFX_L01_Logros_h_9_PROLOG
 #define Galaga_USFX_L01_Source_Galaga_USFX_L01_Logros_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

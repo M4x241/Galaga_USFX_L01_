@@ -14,8 +14,10 @@ private:
 
 	//enum Medallas { ONE, FIVE, TEEN, FIFTEEN, HUNDRED };
 	FVector posicion;
+	int temporizador=0;
 	
-	TMap<FString, int> tablaPuntaje;
+	UPROPERTY(EditAnywhere)
+	TMap<FString, int> tablavidas;
 	//Medallas tipoMedalla=ONE;
 public:
 	//getters
@@ -24,7 +26,14 @@ public:
 	//setters
 	FORCEINLINE void SetPosicion(FVector _posicion) { posicion = _posicion; }
 
-	FORCEINLINE void CalcularPuntaje(FString, int);
+	FORCEINLINE void CalcularVida(FString, int);
+	FORCEINLINE void InsertarVida(FString);
+	FORCEINLINE void EliminarVida(FString);
+	FORCEINLINE void ModificarVida(FString,int);
+	FORCEINLINE void ListarVida();
+	FORCEINLINE void Getcorazones(); 
+	FORCEINLINE void Getescudos();
+
 
 
 	//generar medallas;

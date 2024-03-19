@@ -2,6 +2,7 @@
 
 #include "Galaga_USFX_L01GameMode.h"
 #include "Galaga_USFX_L01Pawn.h"
+#include "Logros.h"
 #include "NaveEnemiga.h"
 #include "NaveEnemigaTransporte.h"
 #include "NaveEnemigaCazaAlfa.h"
@@ -37,8 +38,7 @@ void AGalaga_USFX_L01GameMode::BeginPlay()
 	float x=1200;
 	float y=-1000;
 	FVector ubicacionInicioNaveEnemigaCaza = FVector(200, 200, 250);
-	FVector ubicacionInicioNaveEnemigaTransporte = FVector(-200, 200, 250);
-
+	FVector ubicacionInicioNaveEnemigaTransporte = FVector(-200, 200, 250); 
 	FVector ubicacionNave01 = FVector(x, y, 250.0f);
 	FVector ubicacionNave02 = FVector(x, y + 200, 250.0f);
 	FVector ubicacionNave03 = FVector(x, y + 400, 250.0f); 
@@ -56,9 +56,14 @@ void AGalaga_USFX_L01GameMode::BeginPlay()
 	UWorld* const World = GetWorld();
 	if (World != nullptr)
 	{
+
+		logro1 = World->SpawnActor<ALogros>(FVector(200, 200, 250), FRotator(0, 0, 0)); 
+
+		logro1->ModificarVida("escudo", escudo);
+		
 		// spawn the projectile
 		/*
-		NaveEnemigaCaza01 = World->SpawnActor<ANaveEnemigaCaza>(FVector(200,200,250), rotacionNave);
+		NaveEnemigaCaza01 = World->SpawnActor<ANaveEnemigaCaza>(FVector(200,200,250), rotacionNave); 
 		NaveEnemigaCazaAlfa01 = World->SpawnActor<ANaveEnemigaCazaAlfa>(ubicacionNave01, rotacionNave); 
 		NaveEnemigaCazaDelta01 = World->SpawnActor<ANaveEnemigaCazaDelta>(ubicacionNave02, rotacionNave);
 		NaveEnemigaTransporteLigero01 = World->SpawnActor<ANaveEnemigaTransporteLigero>(ubicacionNave03, rotacionNave);
@@ -151,7 +156,6 @@ void AGalaga_USFX_L01GameMode::BeginPlay()
 			}
 		}
 		TiempoTranscurrido = 0;
-		
 		
 	}
 

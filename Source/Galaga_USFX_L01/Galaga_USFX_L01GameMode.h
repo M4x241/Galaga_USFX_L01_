@@ -20,6 +20,7 @@ class ANaveEnemigaReabastecimientoBombs;
 class ANaveEnemigaReabastecimientoFuel;
 class ANaveEnemigaNodrizaMadre;
 class ANaveEnemigaNodrizaWar;
+class ALogros;
 
 UCLASS(MinimalAPI)
 class AGalaga_USFX_L01GameMode : public AGameModeBase
@@ -34,6 +35,8 @@ public:
 	class ANaveEnemigaCazaDelta;
 	class ANaveEnemigaTransporteLigero;/*
 	*/
+	UPROPERTY(EditAnywhere)
+	int escudo=2;
 
 public:
 	//ANaveEnemigaTransporte* NaveEnemigaTransporte01;
@@ -46,6 +49,8 @@ public:
 
 	ANaveEnemigaCaza* NaveEnemigaCaza01;
 	
+	ALogros* logro1;  
+
 	ANaveEnemigaCazaAlfa* NaveEnemigaCazaAlfa01;
 	ANaveEnemigaCazaDelta* NaveEnemigaCazaDelta01;
 	ANaveEnemigaTransporteLigero* NaveEnemigaTransporteLigero01;
