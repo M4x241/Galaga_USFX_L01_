@@ -67,7 +67,7 @@
 "setupapi.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Binaries\Win64\UE4Editor-Galaga_USFX_L01-5968.dll"
-/IMPLIB:"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\UE4Editor-Galaga_USFX_L01-5968.suppressed.lib"
-/PDB:"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Binaries\Win64\UE4Editor-Galaga_USFX_L01-5968.pdb"
+/OUT:"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Binaries\Win64\UE4Editor-Galaga_USFX_L01-0174.dll"
+/IMPLIB:"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\UE4Editor-Galaga_USFX_L01-0174.suppressed.lib"
+/PDB:"C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Binaries\Win64\UE4Editor-Galaga_USFX_L01-0174.pdb"
 /ignore:4078

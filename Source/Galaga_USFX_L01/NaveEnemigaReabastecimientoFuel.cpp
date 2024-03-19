@@ -19,7 +19,7 @@ void ANaveEnemigaReabastecimientoFuel::Mover(float DeltaTime)
 		bandera *= -1;
 	}
 	if (GetActorLocation().X < -1800) {
-		SetActorLocation(FVector(1200, -1000 + 400, 250.0f));
+		SetActorLocation(posicion);
 	}
 }
 
