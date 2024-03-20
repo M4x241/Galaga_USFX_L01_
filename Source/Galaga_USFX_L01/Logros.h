@@ -14,14 +14,14 @@ private:
 
 	//enum Medallas { ONE, FIVE, TEEN, FIFTEEN, HUNDRED };
 	FVector posicion;
-	int temporizador=0;
+	float temporizador=0;
 	
 	UPROPERTY(EditAnywhere)
 	TMap<FString, int> tablavidas;
 	//Medallas tipoMedalla=ONE;
 public:
 	//getters
-	FORCEINLINE FVector GetPosicion() { return posicion; }
+	//FORCEINLINE FVector GetPosicion() { return posicion; }
 	
 	//setters
 	FORCEINLINE void SetPosicion(FVector _posicion) { posicion = _posicion; }

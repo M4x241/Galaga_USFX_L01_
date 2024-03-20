@@ -10,6 +10,12 @@ void ANaveEnemigaTransportePesado::Tick(float DeltaTime)
 	Mover(DeltaTime);
 }
 
+/*ANaveEnemigaTransportePesado::ANaveEnemigaTransportePesado()
+{
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/Meshes/EnemyLevel2.EnemyLevel2'"));
+	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
+}*/
+
 void ANaveEnemigaTransportePesado::Mover(float DeltaTime)
 {
 	ANaveEnemigaTransporte::Mover(DeltaTime);

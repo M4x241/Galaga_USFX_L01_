@@ -41,10 +41,10 @@ void ALogros::Getcorazones()
 	FString VidasString = FString::FromInt(numvidas);
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("VIDAS: ") + VidasString);
 
-	if (temporizador == 1) {
+	/*if (temporizador == 1) {
 		GEngine->ClearOnScreenDebugMessages();
 		temporizador = 0;
-	}
+	}*/
 }
 void ALogros::Getescudos()
 {
@@ -52,7 +52,7 @@ void ALogros::Getescudos()
 	FString EscudoString = FString::FromInt(numescudo);
 	GEngine->AddOnScreenDebugMessage(-5, 10.0f, FColor::Blue, TEXT("ESCUDO: ") + EscudoString);
 
-	if (temporizador == 1) {
+	if (temporizador >= 1.5) {
 		GEngine->ClearOnScreenDebugMessages();
 		temporizador = 0;
 	}

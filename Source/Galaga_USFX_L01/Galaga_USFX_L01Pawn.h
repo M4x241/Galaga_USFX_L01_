@@ -27,10 +27,10 @@ class AGalaga_USFX_L01Pawn : public APawn
 	
 public:
 
-	FVector posicionNave = GetActorLocation();
+	FVector posicionNave;
 	
 public:
-	FORCEINLINE FVector GetPosicionNave() const { return posicionNave; }
+	FORCEINLINE FVector GetPosicionNave() const { return GetActorLocation(); }
 
 	//===========================
 	

@@ -20,6 +20,7 @@ public:
 	FORCEINLINE int GetBlindaje() const { return blindaje; }
 
 	FORCEINLINE void SetBlindaje(int _blindaje) { blindaje = _blindaje; }
+	//ANaveEnemigaTransportePesado();
 protected:
 	virtual void Mover(float DeltaTime) override;
 	virtual void Destruirse();

@@ -2,6 +2,8 @@
 
 
 #include "NaveEnemigaTransporteLigero.h"
+#include "Galaga_USFX_L01Pawn.h"
+#include "Kismet/GameplayStatics.h"
 
 
 void ANaveEnemigaTransporteLigero::Tick(float DeltaTime)
@@ -10,10 +12,18 @@ void ANaveEnemigaTransporteLigero::Tick(float DeltaTime)
 	Mover(DeltaTime);
 }
 
+ANaveEnemigaTransporteLigero::ANaveEnemigaTransporteLigero()
+{
+	naveobjetivo = Cast<AGalaga_USFX_L01Pawn>(UGameplayStatics::GetPlayerPawn(this, 0));
+
+	// Opción 2: Puedes usar un puntero débil
+	GalagaPawnPtr = Cast<AGalaga_USFX_L01Pawn>(UGameplayStatics::GetPlayerPawn(this, 0));
+}
+
 void ANaveEnemigaTransporteLigero::Mover(float DeltaTime)
 {
 	ANaveEnemigaTransporte::Mover(DeltaTime);
-	ban++;
+	/*ban++;
 	if (ban>100) {
 		aleX = rand() % 1600;
 		aleY = rand() % 1600;
@@ -22,7 +32,25 @@ void ANaveEnemigaTransporteLigero::Mover(float DeltaTime)
 
 	else {
 		SetActorLocation(FVector(aleX,aleY , GetActorLocation().Z));
+	}*/
+
+	
+	if (naveobjetivo!=nullptr) {
+		ban++;
+		if (ban < 100) {
+			aleX = rand() % 1600;
+			aleY = rand() % 1600;
+
+		}
+
+		else {
+			SetActorLocation(naveobjetivo->GetPosicionNave());
+			ban = 0;
+		}
 	}
+	
+	
+	
 }
 
 void ANaveEnemigaTransporteLigero::Destruirse()
