@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
-
+#include "Galaga_USFX_L01Pawn.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "NaveEnemiga.generated.h"
@@ -36,6 +36,7 @@ protected:
 	float peso;
 	float volumen;
 	//reemplazo a posicones XYZ
+	AGalaga_USFX_L01Pawn* NaveAliada;
 	
 	public:
 	//Para leer valores

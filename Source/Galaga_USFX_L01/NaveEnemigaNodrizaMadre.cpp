@@ -3,12 +3,19 @@
 
 #include "NaveEnemigaNodrizaMadre.h"
 #include <time.h>
+#include "Kismet/GameplayStatics.h"
 using namespace std;
 
 void ANaveEnemigaNodrizaMadre::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	Mover(DeltaTime);
+	Destruirse();
+}
+
+ANaveEnemigaNodrizaMadre::ANaveEnemigaNodrizaMadre()
+{
+	//
 }
 
 void ANaveEnemigaNodrizaMadre::Mover(float DeltaTime)
@@ -38,4 +45,7 @@ void ANaveEnemigaNodrizaMadre::Disparar()
 
 void ANaveEnemigaNodrizaMadre::Destruirse()
 {
+	if (GetActorLocation().X-NaveAliada->GetPosicionNave().X<10) {
+		Destroy();
+	}
 }

@@ -3,6 +3,7 @@
 
 #include "NaveEnemiga.h"
 #include "Components/StaticMeshComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 ANaveEnemiga::ANaveEnemiga()
@@ -16,6 +17,7 @@ ANaveEnemiga::ANaveEnemiga()
 	mallaNaveEnemiga = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
 	mallaNaveEnemiga->SetupAttachment(RootComponent);
 	RootComponent = mallaNaveEnemiga;
+	NaveAliada = Cast<AGalaga_USFX_L01Pawn>(UGameplayStatics::GetPlayerPawn(this, 0));
 
 }
 

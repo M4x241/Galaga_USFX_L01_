@@ -32,8 +32,17 @@ void ALogros::ModificarVida(FString _name,int newvida)
 
 void ALogros::ListarVida()
 {
-	Getcorazones();
-	Getescudos();
+	if (temporizador >= 2) {
+		GEngine->ClearOnScreenDebugMessages();
+
+		temporizador = 0;
+		
+	}
+	else {
+		Getcorazones();
+		Getescudos();
+	}
+	
 }
 void ALogros::Getcorazones()
 {
@@ -52,10 +61,7 @@ void ALogros::Getescudos()
 	FString EscudoString = FString::FromInt(numescudo);
 	GEngine->AddOnScreenDebugMessage(-5, 10.0f, FColor::Blue, TEXT("ESCUDO: ") + EscudoString);
 
-	if (temporizador >= 1.5) {
-		GEngine->ClearOnScreenDebugMessages();
-		temporizador = 0;
-	}
+	
 }
 
 

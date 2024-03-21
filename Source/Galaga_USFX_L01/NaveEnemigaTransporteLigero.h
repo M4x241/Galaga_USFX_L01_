@@ -24,7 +24,6 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	AGalaga_USFX_L01Pawn* naveobjetivo;
 
-	TWeakObjectPtr<AGalaga_USFX_L01Pawn> GalagaPawnPtr;
 public:
 	virtual void Tick(float DeltaTime)override;
 	FORCEINLINE bool GetBlindaje() const { return dispersion; }

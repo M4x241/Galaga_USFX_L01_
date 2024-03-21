@@ -16,8 +16,6 @@ ANaveEnemigaTransporteLigero::ANaveEnemigaTransporteLigero()
 {
 	naveobjetivo = Cast<AGalaga_USFX_L01Pawn>(UGameplayStatics::GetPlayerPawn(this, 0));
 
-	// Opción 2: Puedes usar un puntero débil
-	GalagaPawnPtr = Cast<AGalaga_USFX_L01Pawn>(UGameplayStatics::GetPlayerPawn(this, 0));
 }
 
 void ANaveEnemigaTransporteLigero::Mover(float DeltaTime)
