@@ -127,7 +127,7 @@ void AGalaga_USFX_L01Pawn::FireShot(FVector FireDirection)
 			{
 				UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
 			}
-
+			
 			bCanFire = false;
 		}
 	}

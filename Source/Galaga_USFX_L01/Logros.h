@@ -16,16 +16,17 @@ private:
 	FVector posicion;
 	float temporizador=0;
 	
-	UPROPERTY(EditAnywhere)
-	TMap<FString, int> tablavidas;
+	
+	
 	//Medallas tipoMedalla=ONE;
 public:
 	//getters
 	//FORCEINLINE FVector GetPosicion() { return posicion; }
-	
+	UPROPERTY(EditAnywhere)
+	TMap<FString, int> tablavidas;
 	//setters
 	FORCEINLINE void SetPosicion(FVector _posicion) { posicion = _posicion; }
-
+	FORCEINLINE FVector GetPosicionLogro() { return GetActorLocation(); }
 	FORCEINLINE void CalcularVida(FString, int);
 	FORCEINLINE void InsertarVida(FString);
 	FORCEINLINE void EliminarVida(FString);

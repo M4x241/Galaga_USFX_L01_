@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Galaga_USFX_L01.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{3588F339-7D01-448E-ACCA-AED83322D549}</UniqueIdentifier>
+      <UniqueIdentifier>{84957A21-08A8-4EDE-A962-169654531F3F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Galaga_USFX_L01.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{15191EAD-3F4B-4C40-B6C5-19050ED92573}</UniqueIdentifier>
+      <UniqueIdentifier>{59D4E6FD-03D9-4223-8926-03E229212EED}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,8 +32,20 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Galaga_USFX_L01">
-      <UniqueIdentifier>{E8E1B5A2-6C94-4787-81C1-06F525F3F2D7}</UniqueIdentifier>
+      <UniqueIdentifier>{D7177F30-9901-4919-9497-FF3F1F5E6B45}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Galaga_USFX_L01\ActivacionBarrera.cpp">
+      <Filter>Source\Galaga_USFX_L01</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX_L01\ActivacionBarrera.h">
+      <Filter>Source\Galaga_USFX_L01</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX_L01\BarreraDeProteccion.cpp">
+      <Filter>Source\Galaga_USFX_L01</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX_L01\BarreraDeProteccion.h">
+      <Filter>Source\Galaga_USFX_L01</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Galaga_USFX_L01\Escenario.cpp">
       <Filter>Source\Galaga_USFX_L01</Filter>
     </ClCompile>

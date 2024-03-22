@@ -56,10 +56,12 @@ void EmptyLinkFunctionForGeneratedCodeLogros() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALogros_Statics::NewProp_tablavidas_MetaData[] = {
 		{ "Category", "Logros" },
+		{ "Comment", "//getters\n//FORCEINLINE FVector GetPosicion() { return posicion; }\n" },
 		{ "ModuleRelativePath", "Logros.h" },
+		{ "ToolTip", "getters\nFORCEINLINE FVector GetPosicion() { return posicion; }" },
 	};
 #endif
-	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_ALogros_Statics::NewProp_tablavidas = { "tablavidas", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALogros, tablavidas), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_ALogros_Statics::NewProp_tablavidas_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ALogros_Statics::NewProp_tablavidas_MetaData)) };
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_ALogros_Statics::NewProp_tablavidas = { "tablavidas", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALogros, tablavidas), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_ALogros_Statics::NewProp_tablavidas_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ALogros_Statics::NewProp_tablavidas_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALogros_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALogros_Statics::NewProp_tablavidas_ValueProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALogros_Statics::NewProp_tablavidas_Key_KeyProp,
@@ -92,7 +94,7 @@ void EmptyLinkFunctionForGeneratedCodeLogros() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ALogros, 502252185);
+	IMPLEMENT_CLASS(ALogros, 3153962432);
 	template<> GALAGA_USFX_L01_API UClass* StaticClass<ALogros>()
 	{
 		return ALogros::StaticClass();

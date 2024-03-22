@@ -16,6 +16,7 @@
 #include "NaveEnemigaNodrizaMadre.h"
 #include "NaveEnemigaNodrizaWar.h"
 #include <ctime>
+#include "ProyectilEnemigo.h"
 
 AGalaga_USFX_L01GameMode::AGalaga_USFX_L01GameMode()
 {
@@ -102,8 +103,8 @@ void AGalaga_USFX_L01GameMode::BeginPlay()
 		ANaveEnemigaReabastecimientoFuel* NaveEnemigaTFuel;
 		ANaveEnemigaReabastecimientoBombs* NaveEnemigaTBoms;
 
-
-
+		///spwn proyectil
+		proyectil = World->SpawnActor<AProyectilEnemigo>(FVector(-1600,-500,250), rotacionNave);
 
 
 

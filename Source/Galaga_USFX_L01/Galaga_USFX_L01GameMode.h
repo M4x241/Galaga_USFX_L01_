@@ -21,6 +21,7 @@ class ANaveEnemigaReabastecimientoFuel;
 class ANaveEnemigaNodrizaMadre;
 class ANaveEnemigaNodrizaWar;
 class ALogros;
+class AProyectilEnemigo;
 
 UCLASS(MinimalAPI)
 class AGalaga_USFX_L01GameMode : public AGameModeBase
@@ -50,7 +51,7 @@ public:
 	ANaveEnemigaCaza* NaveEnemigaCaza01;
 	
 	ALogros* logro1;  
-
+	AProyectilEnemigo* proyectil;
 	ANaveEnemigaCazaAlfa* NaveEnemigaCazaAlfa01;
 	ANaveEnemigaCazaDelta* NaveEnemigaCazaDelta01;
 	ANaveEnemigaTransporteLigero* NaveEnemigaTransporteLigero01;

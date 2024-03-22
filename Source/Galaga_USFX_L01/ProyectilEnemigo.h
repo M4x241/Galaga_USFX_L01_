@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
+#include "Logros.h"
 #pragma once
-
+#include "Galaga_USFX_L01Pawn.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "ProyectilEnemigo.generated.h"
@@ -10,21 +10,21 @@ UCLASS()
 class GALAGA_USFX_L01_API AProyectilEnemigo : public AActor
 {
 	GENERATED_BODY()
+	UStaticMeshComponent* mallabala;
 private:
 	float speed;
-	float posicionX;
-	float posicionY;
-	float posicionZ;
+	FVector posicionproyectil;
 	float damage;
 	float radio;
 	bool explosion = false;
+	//creando nave aliada y logros
+	ALogros* logro1;  
+	AGalaga_USFX_L01Pawn* naveAliada;
 public:
 
 	//Getters
 	FORCEINLINE float GetSpeed() const { return speed; }
-	FORCEINLINE float GetPosicionX() const { return posicionX; }
-	FORCEINLINE	float GetPosicionY() const { return posicionY; }
-	FORCEINLINE float GetPosicionZ() const { return posicionZ; }
+	FORCEINLINE FVector GetPosicionProyectil() const { return posicionproyectil; }
 	FORCEINLINE float GetDamage() const { return damage; }
 	FORCEINLINE float GetRadio() const { return radio; }
 	FORCEINLINE bool GetExplosion() const { return explosion; }
@@ -33,12 +33,11 @@ public:
 	//Setters
 
 	FORCEINLINE void SetSpeed(float _speed) { speed = _speed; }
-	FORCEINLINE void SetPosicionX(float _posicionX) { posicionX = _posicionX; }
-	FORCEINLINE void SetPosicionY(float _posicionY) { posicionY = _posicionY; }
-	FORCEINLINE void SetPosicionZ(float _posicionZ) { posicionZ = _posicionZ; }
+	FORCEINLINE void SetPosicionX(FVector _posicionproyectil) { posicionproyectil = _posicionproyectil; }
 	FORCEINLINE void SetDamage(float _damage) { damage = _damage; }
 	FORCEINLINE void SetRadio(float _radio) { radio = _radio; }
 	FORCEINLINE void SetExplosion(bool _explosion) { explosion = _explosion; }
+	FORCEINLINE void colision();
 
 	
 public:	
