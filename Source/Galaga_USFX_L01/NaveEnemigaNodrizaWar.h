@@ -21,6 +21,7 @@ public:
 	FORCEINLINE int GetNumCanones() const { return numCanones; }
 	FORCEINLINE void SetAumentoTamanio(int _numCanones) { numCanones =_numCanones; }
 
+	ANaveEnemigaNodrizaWar();
 	virtual void Tick(float DeltaTime)override;
 protected:
 	virtual void Mover(float DeltaTime)override;

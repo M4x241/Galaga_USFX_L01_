@@ -27,7 +27,9 @@ public:
 	FORCEINLINE void SetCantidadBombas(int _cantidadBombas) { cantidadBombas = _cantidadBombas; }
 protected:
 	virtual void Mover(float DeltaTime) override;
-	virtual void Disparar();
+	virtual void Disparar(FVector FireDirection);
 	virtual void Destruirse();
 	virtual void Escapar();
+
+	
 };

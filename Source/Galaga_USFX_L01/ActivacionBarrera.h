@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
-
+#include "Galaga_USFX_L01Pawn.h"
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
 #include "ActivacionBarrera.generated.h"
@@ -18,9 +18,10 @@ public:
 	//se levantara la baerra:
 	UFUNCTION(BlueprintCallable, Category = Cookbook)
 	void Spawn();
-
 	UPROPERTY(EditAnywhere) 
 	TSubclassOf<AActor> BarreraSpawn;  
+	AGalaga_USFX_L01Pawn* NaveBuena;
+	int tempo=230;
 	
 
 protected:

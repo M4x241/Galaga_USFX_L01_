@@ -1,6 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
+#include "Kismet/GameplayStatics.h"
 #include "ActivacionBarrera.h"
 
 // Sets default values for this component's properties
@@ -12,17 +12,26 @@ UActivacionBarrera::UActivacionBarrera()
 	//barrera = CreateDefaultSubobject<USceneComponent>(TEXT("MySceneComponent"));
 	//barrera->SetupAttachment(RootComponent);
 	//RootComponent = barrera;
-	
+	NaveBuena = Cast<AGalaga_USFX_L01Pawn>(UGameplayStatics::GetPlayerPawn(this, 0));
 	// ...
 }
 
 void UActivacionBarrera::Spawn()
 {
-	UWorld* TheWorld = GetWorld();
+	UWorld* TheWorld = GetWorld(); 
 	if (TheWorld!=nullptr) {
-		FTransform TransformBarrera(this->GetComponentTransform());
-		TheWorld->SpawnActor(BarreraSpawn, &TransformBarrera);
-		DestroyComponent();
+		tempo++;
+		if (tempo >= 200) {
+			FTransform TransformBarrera(this->GetComponentTransform());
+			//FVector pos = NaveBuena->Getcomponent();
+			///estas lineas me permiten modificar su posicion
+			//para que siempre aparezca arriba
+			TransformBarrera.SetLocation(GetComponentLocation()+FVector(300,0,0));
+			TransformBarrera.SetRotation(FQuat(0.f,0.f,90.f,90.f));
+			//TransformBarrera
+			TheWorld->SpawnActor(BarreraSpawn, &TransformBarrera);
+			tempo = 0;
+		}
 	}
 
 }
@@ -32,7 +41,7 @@ void UActivacionBarrera::Spawn()
 void UActivacionBarrera::BeginPlay()
 {
 	Super::BeginPlay();
-	Spawn();
+	//Spawn(); 
 	// ...
 	
 }
@@ -42,7 +51,7 @@ void UActivacionBarrera::BeginPlay()
 void UActivacionBarrera::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
+	Spawn();
 	// ...
 }
 

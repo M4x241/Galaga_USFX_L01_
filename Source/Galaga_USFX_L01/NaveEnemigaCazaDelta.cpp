@@ -33,7 +33,7 @@ void ANaveEnemigaCazaDelta::Mover(float DeltaTime)
 	}
 }
 
-void ANaveEnemigaCazaDelta::Disparar()
+void ANaveEnemigaCazaDelta::Disparar(FVector FireDirection)
 {
 }
 

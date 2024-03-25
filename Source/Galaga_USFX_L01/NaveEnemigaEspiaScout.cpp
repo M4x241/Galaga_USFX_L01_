@@ -10,6 +10,8 @@ void ANaveEnemigaEspiaScout::Tick(float DeltaTime)
 	Mover(DeltaTime);
 }
 
+
+
 void ANaveEnemigaEspiaScout::Mover(float DeltaTime)
 {
 	ANaveEnemigaEspia::Mover(DeltaTime);

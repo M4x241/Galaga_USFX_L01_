@@ -4,6 +4,13 @@
 #include "NaveEnemigaNodrizaWar.h"
 
 
+ANaveEnemigaNodrizaWar::ANaveEnemigaNodrizaWar()
+{
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/Meshes/Nodriza5.Nodriza5'"));
+	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
+		
+}
+
 void ANaveEnemigaNodrizaWar::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);

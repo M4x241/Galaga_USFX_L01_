@@ -23,7 +23,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	ANaveEnemigaCazaDelta();
 	virtual void Mover(float DeltaTime) override;
-	virtual void Disparar();
+	virtual void Disparar(FVector FireDirection);
 	virtual void Destruirse();
 	virtual void Escapar();
 	
