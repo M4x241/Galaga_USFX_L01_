@@ -10,6 +10,7 @@ UCLASS()
 class GALAGA_USFX_L01_API ALogros : public AActor
 {
 	GENERATED_BODY()
+	UStaticMeshComponent* mallalogro;
 private:
 
 	//enum Medallas { ONE, FIVE, TEEN, FIFTEEN, HUNDRED };

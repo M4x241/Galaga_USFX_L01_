@@ -62,6 +62,7 @@ void AGalaga_USFX_L01GameMode::BeginPlay()
 		logro1 = World->SpawnActor<ALogros>(FVector(200, 200, 250), FRotator(0, 0, 0)); 
 
 		logro1->ModificarVida("escudo", escudo);
+		logro1->InsertarVida("corazon");
 		
 		// spawn the projectile
 		/*

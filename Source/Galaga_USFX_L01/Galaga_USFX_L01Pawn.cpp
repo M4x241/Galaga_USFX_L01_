@@ -50,6 +50,37 @@ AGalaga_USFX_L01Pawn::AGalaga_USFX_L01Pawn()
 	GunOffset = FVector(90.f, 0.f, 0.f);
 	FireRate = 0.1f;
 	bCanFire = true;
+
+	MyInventory = CreateDefaultSubobject<UInventarioComponent>("MyInventory");
+}
+
+void AGalaga_USFX_L01Pawn::DropItem()
+{
+	if(MyInventory->CurrentInventory.Num() == 0)
+	{
+		return;
+	}
+	AmucionV2* Item = MyInventory->CurrentInventory.Last();
+	MyInventory->RemoveFromInventory(Item);
+	FVector ItemOrigin;
+	FVector ItemBounds;
+	Item->GetActorBounds(false, ItemOrigin, ItemBounds);
+	FTransform PutDownLocation = GetTransform() + FTransform(RootComponent->GetForwardVector() *ItemBounds.GetMax());Item->PutDown(PutDownLocation);
+}
+
+void AGalaga_USFX_L01Pawn::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+{
+	AmucionV2* InventoryItem = Cast<AmucionV2>(Other);
+	if (InventoryItem != nullptr)
+	{
+		TakeItem(InventoryItem);
+	}
+}
+
+void AGalaga_USFX_L01Pawn::TakeItem(AmucionV2* InventoryItem)
+{
+	InventoryItem->PickUp(); 
+	MyInventory->AddToInventory(InventoryItem); 
 }
 
 void AGalaga_USFX_L01Pawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -61,6 +92,9 @@ void AGalaga_USFX_L01Pawn::SetupPlayerInputComponent(class UInputComponent* Play
 	PlayerInputComponent->BindAxis(MoveRightBinding);
 	PlayerInputComponent->BindAxis(FireForwardBinding);
 	PlayerInputComponent->BindAxis(FireRightBinding);
+
+
+	PlayerInputComponent->BindAction("menuinventario", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::DropItem);
 }
 
 void AGalaga_USFX_L01Pawn::Tick(float DeltaSeconds)

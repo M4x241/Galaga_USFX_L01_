@@ -1,7 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-#include "Logros.h"
+
 #pragma once
 #include "Galaga_USFX_L01Pawn.h"
+#include "Logros.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "ProyectilEnemigo.generated.h"
@@ -13,7 +14,7 @@ class GALAGA_USFX_L01_API AProyectilEnemigo : public AActor
 	UStaticMeshComponent* mallabala;
 private:
 	float speed;
-	FVector posicionproyectil;
+	FVector posicionproyectil; 
 	float damage;
 	float radio;
 	bool explosion = false;

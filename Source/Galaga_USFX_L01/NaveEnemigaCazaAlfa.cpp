@@ -62,26 +62,21 @@ void ANaveEnemigaCazaAlfa::Disparar(FVector FireDirection)
 {
 	if (bCanFire)
 	{
-		// Si la dirección de disparo tiene un tamaño cuadrado mayor que 0 (es decir, si hay una dirección válida)
 		if (FireDirection.SizeSquared() > 0.0f)
 		{
 			const FRotator FireRotation = FireDirection.Rotation();
-			// Calcula la ubicación de donde se debe disparar el proyectil
 			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
 
-			// Obtiene el mundo
 			UWorld* const World = GetWorld();
 			if (World != nullptr)
 			{
-				// Spawnea el proyectil
 				World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation, FireRotation);
 			}
 
-			// Establece bCanFire en falso para evitar disparos continuos
 			bCanFire = false;
 
 			// Configura un temporizador para reactivar el disparo después de 3 segundos
-			World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &ANaveEnemigaCazaAlfa::ShotTimerExpired, 0.1f, false);
+			World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &ANaveEnemigaCazaAlfa::ShotTimerExpired, 1.0f, false);
 		}
 	}
 }

@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "InventarioComponent.h"
+#include "mucionV2.h"
 #include "Galaga_USFX_L01Pawn.generated.h"
 
 UCLASS(Blueprintable)
@@ -33,6 +35,24 @@ public:
 	FORCEINLINE FVector GetPosicionNave() const { return GetActorLocation(); }
 
 	//===========================
+	UPROPERTY()
+	UInventarioComponent* MyInventory;
+	
+	
+	UFUNCTION()
+	void TakeItem(AmucionV2* InventoryItem);
+	
+	UFUNCTION()
+	void DropItem();
+
+	
+
+	UFUNCTION()
+	virtual void NotifyHit(class UPrimitiveComponent* MyComp,
+		AActor* Other, class UPrimitiveComponent* OtherComp,
+		bool bSelfMoved, FVector HitLocation, FVector
+		HitNormal, FVector NormalImpulse, const FHitResult&
+		Hit) override;
 	
 public:
 	AGalaga_USFX_L01Pawn();
@@ -85,5 +105,8 @@ public:
 	FORCEINLINE class UCameraComponent* GetCameraComponent() const { return CameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+public:
+	//modificamos la velocidad
+	FORCEINLINE void SetVelociad(float _MoveSpeed) { MoveSpeed = _MoveSpeed; }
 };
 

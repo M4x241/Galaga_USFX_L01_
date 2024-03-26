@@ -74,6 +74,14 @@ ALogros::ALogros()
 	tablavidas.Add("corazon", 1);
 	tablavidas.Add("escudo", 0);
 
+
+	///malla
+	mallalogro = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMesh'/Game/Meshes/Food.Food'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/Meshes/Food.Food'"));
+	mallalogro->SetStaticMesh(ShipMesh.Object);
+	mallalogro->SetupAttachment(RootComponent);
+	RootComponent = mallalogro;
+
 }
 
 // Called when the game starts or when spawned
