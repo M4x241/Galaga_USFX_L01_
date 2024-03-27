@@ -27,7 +27,7 @@ public:
 	TMap<FString, int> tablavidas;
 	//setters
 	FORCEINLINE void SetPosicion(FVector _posicion) { posicion = _posicion; }
-	FORCEINLINE FVector GetPosicionLogro() { return GetActorLocation(); }
+	FORCEINLINE FVector GetPosicionLogro() const { return GetActorLocation(); }
 	FORCEINLINE void CalcularVida(FString, int);
 	FORCEINLINE void InsertarVida(FString);
 	FORCEINLINE void EliminarVida(FString);

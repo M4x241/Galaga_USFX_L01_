@@ -22,7 +22,7 @@ ABarreraDeProteccion::ABarreraDeProteccion()
 void ABarreraDeProteccion::Destruir(float _tempo)
 {
 	//si el tiempo es mayor a 5 segundos destruir la barrera
-	if (_tempo > 2)
+	if (_tempo > 4)
 	{
 		Destroy();
 	}

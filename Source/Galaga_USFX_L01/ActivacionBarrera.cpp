@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Kismet/GameplayStatics.h"
 #include "ActivacionBarrera.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values for this component's properties
 UActivacionBarrera::UActivacionBarrera()
@@ -21,7 +21,7 @@ void UActivacionBarrera::Spawn()
 	UWorld* TheWorld = GetWorld(); 
 	if (TheWorld!=nullptr) {
 		tempo+=GetWorld()->DeltaTimeSeconds;
-		if (tempo >= 3) {
+		if (tempo >= 5) {
 			FTransform TransformBarrera(this->GetComponentTransform());
 			//FVector pos = NaveBuena->Getcomponent();
 			///estas lineas me permiten modificar su posicion
