@@ -8,7 +8,7 @@ ANaveEnemigaNodrizaWar::ANaveEnemigaNodrizaWar()
 {
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/Meshes/Nodriza5.Nodriza5'"));
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
-		
+	SetActorScale3D(FVector(0.5,0.5,0.5));
 }
 
 void ANaveEnemigaNodrizaWar::Tick(float DeltaTime)

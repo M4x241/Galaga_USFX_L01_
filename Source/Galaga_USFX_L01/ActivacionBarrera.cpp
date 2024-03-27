@@ -20,14 +20,14 @@ void UActivacionBarrera::Spawn()
 {
 	UWorld* TheWorld = GetWorld(); 
 	if (TheWorld!=nullptr) {
-		tempo++;
-		if (tempo >= 200) {
+		tempo+=GetWorld()->DeltaTimeSeconds;
+		if (tempo >= 3) {
 			FTransform TransformBarrera(this->GetComponentTransform());
 			//FVector pos = NaveBuena->Getcomponent();
 			///estas lineas me permiten modificar su posicion
 			//para que siempre aparezca arriba
 			//TransformBarrera.SetScale3D(FVector(5,0.5,0.5));
-			TransformBarrera.SetLocation(GetComponentLocation()+FVector(300,0,0));
+			TransformBarrera.SetLocation(GetComponentLocation()+FVector(150,0,0));
 			TransformBarrera.SetRotation(FQuat(0.f,0.f,90.f,90.f));
 			//TransformBarrera
 			TheWorld->SpawnActor(BarreraSpawn, &TransformBarrera);
@@ -42,8 +42,6 @@ void UActivacionBarrera::Spawn()
 void UActivacionBarrera::BeginPlay()
 {
 	Super::BeginPlay();
-	//Spawn(); 
-	// ...
 	
 }
 
@@ -53,6 +51,5 @@ void UActivacionBarrera::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	Spawn();
-	// ...
 }
 

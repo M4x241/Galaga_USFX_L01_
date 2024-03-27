@@ -19,10 +19,11 @@ ABarreraDeProteccion::ABarreraDeProteccion()
 	SetActorScale3D(FVector(4, 4, 4));
 }
 
-void ABarreraDeProteccion::Destruir()
+void ABarreraDeProteccion::Destruir(float _tempo)
 {
-	tempo++;
-	if (tempo >= 100) {
+	//si el tiempo es mayor a 5 segundos destruir la barrera
+	if (_tempo > 2)
+	{
 		Destroy();
 	}
 }
@@ -38,6 +39,7 @@ void ABarreraDeProteccion::BeginPlay()
 void ABarreraDeProteccion::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	Destruir();
+	tempo += GetWorld()->DeltaTimeSeconds;
+	Destruir( tempo); 
 }
 

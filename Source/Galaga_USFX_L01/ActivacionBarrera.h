@@ -21,7 +21,7 @@ public:
 	UPROPERTY(EditAnywhere) 
 	TSubclassOf<AActor> BarreraSpawn;  
 	AGalaga_USFX_L01Pawn* NaveBuena;
-	int tempo=230;
+	float tempo=3;
 	
 
 protected:

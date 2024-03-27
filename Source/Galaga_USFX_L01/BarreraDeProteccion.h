@@ -13,12 +13,12 @@ class GALAGA_USFX_L01_API ABarreraDeProteccion : public AActor
 	UStaticMeshComponent* barreramesh;
 private:
 	UPROPERTY(VisibleAnywhere)
-	int tempo = 0;
+	float tempo = 0;
 	
 public:	
 	// Sets default values for this actor's properties
 	ABarreraDeProteccion();
-	FORCEINLINE void Destruir();
+	FORCEINLINE void Destruir(float _tempo);
 
 protected:
 	// Called when the game starts or when spawned
