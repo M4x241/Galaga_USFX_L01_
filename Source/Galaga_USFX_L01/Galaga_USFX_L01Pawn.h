@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "InventarioComponent.h"
 #include "mucionV2.h"
+#include "Logros.h" 
 #include "Galaga_USFX_L01Pawn.generated.h"
 
 UCLASS(Blueprintable)
@@ -27,12 +28,21 @@ class AGalaga_USFX_L01Pawn : public APawn
 
 	//AGREGANDO SACAR VALOR DE LA POSICON
 	
-public:
+private:
 
 	FVector posicionNave;
+	int vida = 3;
+	AActor* logro1;
 	
 public:
 	FORCEINLINE FVector GetPosicionNave() const { return GetActorLocation(); }
+	FORCEINLINE int GetVida()const { return vida; }
+	FORCEINLINE void SetVida(int _vida) { vida = _vida; }
+	FORCEINLINE void SetLogro(ALogros* _logro) { logro1 = _logro; }
+	//FORCEINLINE ALogros* GetLogro() { return logro1; }
+	void RestarVida();
+
+
 
 	//===========================
 	UPROPERTY()

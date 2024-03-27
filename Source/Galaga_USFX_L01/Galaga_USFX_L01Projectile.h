@@ -13,7 +13,9 @@ UCLASS(config=Game)
 class AGalaga_USFX_L01Projectile : public AActor
 {
 	GENERATED_BODY()
-
+public:
+	bool enemigo=false; 
+private:
 	/** Sphere collision component */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* ProjectileMesh;

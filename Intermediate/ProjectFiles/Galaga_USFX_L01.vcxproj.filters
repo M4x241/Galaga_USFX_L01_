@@ -253,12 +253,6 @@
     <ClInclude Include="..\..\Source\Galaga_USFX_L01\PlayerScore.h">
       <Filter>Source\Galaga_USFX_L01</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Galaga_USFX_L01\ProyectilAmigo.cpp">
-      <Filter>Source\Galaga_USFX_L01</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Galaga_USFX_L01\ProyectilAmigo.h">
-      <Filter>Source\Galaga_USFX_L01</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\Galaga_USFX_L01\ProyectilEnemigo.cpp">
       <Filter>Source\Galaga_USFX_L01</Filter>
     </ClCompile>

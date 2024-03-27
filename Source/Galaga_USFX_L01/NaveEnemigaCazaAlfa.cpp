@@ -54,7 +54,6 @@ void ANaveEnemigaCazaAlfa::Mover(float DeltaTime)
 		Disparar(FireDirection);
 	}
 
-	//disparo cada vuelta que de
 }
  
 
@@ -76,7 +75,7 @@ void ANaveEnemigaCazaAlfa::Disparar(FVector FireDirection)
 			bCanFire = false;
 
 			// Configura un temporizador para reactivar el disparo después de 3 segundos
-			World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &ANaveEnemigaCazaAlfa::ShotTimerExpired, 1.0f, false);
+			World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &ANaveEnemigaCazaAlfa::ShotTimerExpired, 0.5f, false);
 		}
 	}
 }

@@ -6,6 +6,9 @@
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Engine/StaticMesh.h"
+#include "NaveEnemiga.h"
+#include "NaveEnemiga.h"
+#include "Galaga_USFX_L01Pawn.h"
 
 AGalaga_USFX_L01Projectile::AGalaga_USFX_L01Projectile() 
 {
@@ -36,15 +39,30 @@ AGalaga_USFX_L01Projectile::AGalaga_USFX_L01Projectile()
 void AGalaga_USFX_L01Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	// Only add impulse and destroy projectile if we hit a physics
-	AActor* ActorHit = Cast<AActor>(OtherActor);
-	if(ActorHit!= nullptr)
+	ANaveEnemiga* ActorHit = Cast<ANaveEnemiga>(OtherActor);
+	if(ActorHit!= nullptr )
 	{
-		ActorHit->Destroy();
+		ActorHit->ReducirStamina();
+		if (ActorHit->GetStamina() <=0) {
+			ActorHit->Destroy();
+		}
 	}
+	else {
+		AGalaga_USFX_L01Pawn* Nave = Cast<AGalaga_USFX_L01Pawn>(OtherActor);
+		if (Nave != nullptr)
+		{
+			Nave->RestarVida();
+			if (Nave->GetVida() <= 0) {
+				Nave->Destroy();
+			}
+		}
+	}
+	
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr) && OtherComp->IsSimulatingPhysics())
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 20.0f, GetActorLocation());
 	}
 
 	Destroy();
+	enemigo = false;
 }

@@ -20,9 +20,16 @@ void ALogros::InsertarVida(FString _name)
 	tablavidas[_name] += 1;
 }
 
-void ALogros::EliminarVida(FString _name)
+void ALogros::EliminarVida()
 {
-	tablavidas[_name] -= 1;
+	tablavidas["corazon"] -= 1;
+	/*if (tablavidas["escudo"] > 0) {
+				tablavidas["escudo"] -= 1;
+	}
+	else {
+		
+	}*/
+	ListarVida();
 }
 
 void ALogros::ModificarVida(FString _name,int newvida)
@@ -49,11 +56,6 @@ void ALogros::Getcorazones()
 	int numvidas = tablavidas["corazon"];
 	FString VidasString = FString::FromInt(numvidas);
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("VIDAS: ") + VidasString);
-
-	/*if (temporizador == 1) {
-		GEngine->ClearOnScreenDebugMessages();
-		temporizador = 0;
-	}*/
 }
 void ALogros::Getescudos()
 {
@@ -71,7 +73,7 @@ ALogros::ALogros()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	tablavidas.Add("corazon", 1);
+	tablavidas.Add("corazon", 3);
 	tablavidas.Add("escudo", 0);
 
 

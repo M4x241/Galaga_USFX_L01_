@@ -30,7 +30,7 @@ public:
 	FORCEINLINE FVector GetPosicionLogro() const { return GetActorLocation(); }
 	FORCEINLINE void CalcularVida(FString, int);
 	FORCEINLINE void InsertarVida(FString);
-	FORCEINLINE void EliminarVida(FString);
+	FORCEINLINE void EliminarVida();
 	FORCEINLINE void ModificarVida(FString,int);
 	FORCEINLINE void ListarVida();
 	FORCEINLINE void Getcorazones(); 

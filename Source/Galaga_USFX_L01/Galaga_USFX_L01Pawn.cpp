@@ -12,6 +12,7 @@
 #include "Engine/StaticMesh.h"
 #include "Kismet/GameplayStatics.h"
 #include "Sound/SoundBase.h"
+#include "Logros.h"
 
 const FName AGalaga_USFX_L01Pawn::MoveForwardBinding("MoveForward");
 const FName AGalaga_USFX_L01Pawn::MoveRightBinding("MoveRight");
@@ -52,6 +53,18 @@ AGalaga_USFX_L01Pawn::AGalaga_USFX_L01Pawn()
 	bCanFire = true;
 
 	MyInventory = CreateDefaultSubobject<UInventarioComponent>("MyInventory");
+	//haz una referencia a logro1 creado en el gamemode
+	//logro1 = NewObject<ALogros>(this); 
+	//logro1= Cast<ALogros>(UGameplayStatics::GetPlayerController(GetWorld(), 0));
+	/*if (logro1)
+	{
+		logro1->ModificarVida("escudo", 3);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("No se pudo crear un objeto Logros."));
+	}*/
+
 }
 
 void AGalaga_USFX_L01Pawn::DropItem()
@@ -77,6 +90,20 @@ void AGalaga_USFX_L01Pawn::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other,
 	}
 }
 
+void AGalaga_USFX_L01Pawn::RestarVida()
+{
+	vida--; 
+	
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Vida ENTROOOOOOOOO")); 
+
+	if(ALogros* logro = Cast<ALogros>(logro1))
+	{
+		logro->EliminarVida();
+		
+	}
+
+}
+
 void AGalaga_USFX_L01Pawn::TakeItem(AmucionV2* InventoryItem)
 {
 	InventoryItem->PickUp(); 
@@ -99,6 +126,8 @@ void AGalaga_USFX_L01Pawn::SetupPlayerInputComponent(class UInputComponent* Play
 
 void AGalaga_USFX_L01Pawn::Tick(float DeltaSeconds)
 {
+
+
 	// Find movement direction
 	//posicionNave = GetPa();
 	const float ForwardValue = GetInputAxisValue(MoveForwardBinding);

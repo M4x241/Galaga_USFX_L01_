@@ -17,6 +17,7 @@
 #include "NaveEnemigaNodrizaWar.h"
 #include <ctime>
 #include "ProyectilEnemigo.h"
+#include "Kismet/GameplayStatics.h"
 
 AGalaga_USFX_L01GameMode::AGalaga_USFX_L01GameMode()
 {
@@ -59,10 +60,11 @@ void AGalaga_USFX_L01GameMode::BeginPlay()
 	if (World != nullptr)
 	{
 
-		logro1 = World->SpawnActor<ALogros>(FVector(200, 200, 250), FRotator(0, 0, 0)); 
-
-		logro1->ModificarVida("escudo", escudo);
-		logro1->InsertarVida("corazon");
+		logro1 = World->SpawnActor<ALogros>(FVector(200, 200, 250), FRotator(0, 0, 0));  
+		AGalaga_USFX_L01Pawn* LogroGalaga = Cast<AGalaga_USFX_L01Pawn>(UGameplayStatics::GetPlayerPawn(this, 0)); 
+		LogroGalaga->SetLogro(logro1);
+		/*logro1->ModificarVida("escudo", escudo);
+		logro1->InsertarVida("corazon");*/
 		
 		// spawn the projectile
 		/*
@@ -112,7 +114,7 @@ void AGalaga_USFX_L01GameMode::BeginPlay()
 		int tipNave = 0;
 		for (int i = 0; i < 30;i++) {
 			tipNave = rand() % 9;
-			FVector posicionNave = FVector(rand() % 1000, rand() % 1000, 250);
+			FVector posicionNave = FVector(rand() % 1000, rand() % 1000, 200);
 			switch (tipNave) {
 			case 0:
 				NaveEnemigaTAlfa = World->SpawnActor<ANaveEnemigaCazaAlfa>(posicionNave, rotacionNave); 

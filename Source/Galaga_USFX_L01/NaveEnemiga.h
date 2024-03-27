@@ -19,7 +19,7 @@ public:
 
 protected:
 	
-	float stamina;
+	float stamina=2;
 	float speed;
 	float damage;
 	FString name;
@@ -53,6 +53,7 @@ protected:
 		FORCEINLINE float GetEnergia() const { return energia; }
 		FORCEINLINE float GetPeso() const { return peso; }
 		FORCEINLINE float GetVolumen() const { return volumen; }
+		FORCEINLINE void ReducirStamina() { stamina -= 1; }
 
 	//Para reescribir valores
 	FORCEINLINE void SetStamina(float _stamina){stamina=_stamina;}

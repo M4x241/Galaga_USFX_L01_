@@ -7,20 +7,21 @@
 
 void AProyectilEnemigo::colision()
 {
-	if (logro1) {
-		GEngine->AddOnScreenDebugMessage(-5, 10.0f, FColor::Blue, TEXT("logro: "));
-	}
-	if (logro1 != nullptr && naveAliada != nullptr) {
-		GEngine->AddOnScreenDebugMessage(-5, 10.0f, FColor::Blue, TEXT("ENTRO: "));
+	// colision con proyectil enemigo
+	//if (logro1) {
+	//	GEngine->AddOnScreenDebugMessage(-5, 10.0f, FColor::Blue, TEXT("logro: "));
+	//}
+	//if (logro1 != nullptr && naveAliada != nullptr) {
+	//	GEngine->AddOnScreenDebugMessage(-5, 10.0f, FColor::Blue, TEXT("ENTRO: "));
 
-		if (GetActorLocation().Y - naveAliada->GetPosicionNave().Y >= -200 || logro1->GetActorLocation().Y - naveAliada->GetPosicionNave().Y <= 0) {
-			//if (logro1->tablavidas["corazon"] <= 3) {
-			
-			logro1->InsertarVida("escudo");
-			//}
-		}
-		logro1->InsertarVida("corazon"); 
-	}
+	//	if (GetActorLocation().Y - naveAliada->GetPosicionNave().Y >= -200 || logro1->GetActorLocation().Y - naveAliada->GetPosicionNave().Y <= 0) {
+	//		//if (logro1->tablavidas["corazon"] <= 3) {
+	//		
+	//		logro1->InsertarVida("escudo");
+	//		//}
+	//	}
+	//	logro1->InsertarVida("corazon"); 
+	//}
 	
 	
 }

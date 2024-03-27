@@ -3,7 +3,6 @@
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/BarreraDeProteccion.gen.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/Escenario.gen.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/Evento.gen.cpp"
-#include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/Galaga_USFX_L01.init.gen.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/Galaga_USFX_L01GameMode.gen.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/Galaga_USFX_L01Pawn.gen.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/Galaga_USFX_L01Projectile.gen.cpp"
@@ -35,5 +34,4 @@
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/NaveEnemigaTransportePesado.gen.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/NavesRestantes.gen.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/PlayerScore.gen.cpp"
-#include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/ProyectilAmigo.gen.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX_L01/ProyectilEnemigo.gen.cpp"
