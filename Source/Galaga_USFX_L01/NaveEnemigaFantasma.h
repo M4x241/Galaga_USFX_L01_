@@ -17,6 +17,7 @@ private:
 	int tiempoInvisible;
 
 public:
+	ANaveEnemigaFantasma(); 
 	FORCEINLINE int GetTiempoInvisible() const { return tiempoInvisible; }
 	FORCEINLINE void SetTiempoInvisble(int _tiempoInvisible) { tiempoInvisible = _tiempoInvisible; }
 };

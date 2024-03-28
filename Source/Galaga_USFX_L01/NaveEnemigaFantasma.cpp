@@ -3,3 +3,8 @@
 
 #include "NaveEnemigaFantasma.h"
 
+ANaveEnemigaFantasma::ANaveEnemigaFantasma()
+{
+	static ConstructorHelpers::FObjectFinder<UStaticMesh>Mesh(TEXT("StaticMesh'/Game/Meshes/PlayerShip1.PlayerShip1'"));
+	mallaNaveEnemiga->SetStaticMesh(Mesh.Object);
+}
