@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "GeneradorNaves.h"
 #include "Galaga_USFX_L01GameMode.generated.h"
+
 
 //============INPOORTAMOS la nave enemiga
 class ANaveEnemiga;
@@ -22,6 +24,7 @@ class ANaveEnemigaNodrizaMadre;
 class ANaveEnemigaNodrizaWar;
 class ALogros;
 class AProyectilEnemigo;
+class UGeneradorNaves;
 
 UCLASS(MinimalAPI)
 class AGalaga_USFX_L01GameMode : public AGameModeBase
@@ -32,14 +35,14 @@ public:
 	AGalaga_USFX_L01GameMode();
 public:
 	
-	/*class ANaveEnemigaCazaAlfa;
-	class ANaveEnemigaCazaDelta;
-	class ANaveEnemigaTransporteLigero;/*
-	*/
+	UGeneradorNaves* GeneradorNaves01;
 	UPROPERTY(EditAnywhere)
 	int escudo=2;
 
 public:
+
+
+
 	//ANaveEnemigaTransporte* NaveEnemigaTransporte01;
 	TArray<ANaveEnemigaCaza*> TANaveEnemigaCaza;
 	TArray<ANaveEnemigaCazaAlfa*> TANaveEnemigaCazaAlfa;
@@ -52,16 +55,6 @@ public:
 	
 	ALogros* logro1;  
 	AProyectilEnemigo* proyectil;
-	ANaveEnemigaCazaAlfa* NaveEnemigaCazaAlfa01;
-	ANaveEnemigaCazaDelta* NaveEnemigaCazaDelta01;
-	ANaveEnemigaTransporteLigero* NaveEnemigaTransporteLigero01;
-	ANaveEnemigaTransportePesado* NaveEnemigaTransportePesado01;
-	ANaveEnemigaEspiaScout* NaveEnemigaEspiaScout01;
-	ANaveEnemigaEspiaCentral* NaveEnemigaEspiaCentral01;
-	ANaveEnemigaReabastecimientoBombs* NaveEnemigaReabastecimientoBombs01;
-	ANaveEnemigaReabastecimientoFuel* NaveEnemigaReabastecimientoFuel01;
-	ANaveEnemigaNodrizaMadre* NaveEnemigaNodrizaMadre01;
-	ANaveEnemigaNodrizaWar* NaveEnemigaNodrizaWar01;
 public:
 	virtual void Tick(float DeltaTime)override;
 	

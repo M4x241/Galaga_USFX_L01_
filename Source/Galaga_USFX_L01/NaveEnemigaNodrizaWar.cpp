@@ -6,9 +6,8 @@
 
 ANaveEnemigaNodrizaWar::ANaveEnemigaNodrizaWar()
 {
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/Meshes/Nodriza5.Nodriza5'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/Meshes/Propios/5a9314e15a15_687ef6163624_CREA_UNA_NAVE_NODRI_fbx/687ef6163624_CREA_UNA_NAVE_NODRI.687ef6163624_CREA_UNA_NAVE_NODRI'"));
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
-	SetActorScale3D(FVector(0.5,0.5,0.5));
 }
 
 void ANaveEnemigaNodrizaWar::Tick(float DeltaTime)
