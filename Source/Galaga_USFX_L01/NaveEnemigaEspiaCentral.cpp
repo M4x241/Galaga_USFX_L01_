@@ -13,7 +13,7 @@ void ANaveEnemigaEspiaCentral::Tick(float DeltaTime)
 
 void ANaveEnemigaEspiaCentral::Mover(float DeltaTime)
 {
-	ANaveEnemigaEspia::Mover(DeltaTime);
+	/*ANaveEnemigaEspia::Mover(DeltaTime);
 	bandera++;
 	if (bandera<300 && bandera >0) {
 		
@@ -27,7 +27,7 @@ void ANaveEnemigaEspiaCentral::Mover(float DeltaTime)
 	}
 	if (GetActorLocation().X < -1800) {
 		SetActorLocation(FVector(posicion));
-	}
+	}*/
 	
 }
 

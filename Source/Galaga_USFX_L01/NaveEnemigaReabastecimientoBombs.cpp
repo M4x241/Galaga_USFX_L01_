@@ -12,7 +12,7 @@ void ANaveEnemigaReabastecimientoBombs::Tick(float DeltaTime)
 
 void ANaveEnemigaReabastecimientoBombs::Mover(float DeltaTime)
 {
-	ANaveEnemigaReabastecimiento::Mover(DeltaTime);
+	/*ANaveEnemigaReabastecimiento::Mover(DeltaTime);
 	SetActorLocation(FVector(GetActorLocation().X - 2, GetActorLocation().Y, GetActorLocation().Z )); 
 	SetActorRotation(FRotator(bandera, 90, 90));
 	if (bandera>=360) {
@@ -21,7 +21,7 @@ void ANaveEnemigaReabastecimientoBombs::Mover(float DeltaTime)
 	bandera++;
 	if (GetActorLocation().X < -1800) {
 		SetActorLocation(posicion);
-	}
+	}*/
 
 }
 

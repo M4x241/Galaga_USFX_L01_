@@ -16,7 +16,7 @@ public:
 	// Sets default values for this component's properties
 	UActivacionBarrera();
 	//se levantara la baerra:
-	UFUNCTION(BlueprintCallable, Category = Cookbook)
+	UFUNCTION(BlueprintCallable, Category = "Barrera")
 	void Spawn();
 	UPROPERTY(EditAnywhere) 
 	TSubclassOf<AActor> BarreraSpawn;  

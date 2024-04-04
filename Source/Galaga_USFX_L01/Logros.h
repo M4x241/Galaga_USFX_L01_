@@ -23,16 +23,21 @@ private:
 public:
 	//getters
 	//FORCEINLINE FVector GetPosicion() { return posicion; }
+
+
+	///TMAP INICIALIZACION
 	UPROPERTY(EditAnywhere)
 	TMap<FString, int> tablavidas;
 	//setters
 	FORCEINLINE void SetPosicion(FVector _posicion) { posicion = _posicion; }
 	FORCEINLINE FVector GetPosicionLogro() const { return GetActorLocation(); }
 	FORCEINLINE void CalcularVida(FString, int);
+	//METODOS DEL TMAP
 	FORCEINLINE void InsertarVida(FString);
 	FORCEINLINE void EliminarVida();
 	FORCEINLINE void ModificarVida(FString,int);
 	FORCEINLINE void ListarVida();
+	//METODOS LISTAR VIDA
 	FORCEINLINE void Getcorazones(); 
 	FORCEINLINE void Getescudos();
 

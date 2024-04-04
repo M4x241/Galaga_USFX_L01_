@@ -56,9 +56,9 @@ void EmptyLinkFunctionForGeneratedCodeLogros() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALogros_Statics::NewProp_tablavidas_MetaData[] = {
 		{ "Category", "Logros" },
-		{ "Comment", "//getters\n//FORCEINLINE FVector GetPosicion() { return posicion; }\n" },
+		{ "Comment", "///TMAP INICIALIZACION\n" },
 		{ "ModuleRelativePath", "Logros.h" },
-		{ "ToolTip", "getters\nFORCEINLINE FVector GetPosicion() { return posicion; }" },
+		{ "ToolTip", "TMAP INICIALIZACION" },
 	};
 #endif
 	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_ALogros_Statics::NewProp_tablavidas = { "tablavidas", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALogros, tablavidas), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_ALogros_Statics::NewProp_tablavidas_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ALogros_Statics::NewProp_tablavidas_MetaData)) };
@@ -94,7 +94,7 @@ void EmptyLinkFunctionForGeneratedCodeLogros() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ALogros, 3153962432);
+	IMPLEMENT_CLASS(ALogros, 3348177963);
 	template<> GALAGA_USFX_L01_API UClass* StaticClass<ALogros>()
 	{
 		return ALogros::StaticClass();

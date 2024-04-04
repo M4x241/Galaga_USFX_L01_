@@ -37,8 +37,8 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 
 void ANaveEnemigaCaza::Mover(float DeltaTime)
 { 
-	speed = 1; 
-	SetActorLocation(FVector(GetActorLocation().X - speed, GetActorLocation().Y, GetActorLocation().Z)); 
+	/*speed = 1; 
+	SetActorLocation(FVector(GetActorLocation().X - speed, GetActorLocation().Y, GetActorLocation().Z)); */
 
 	//if (Super::GetPosicion().X == -1600.0f) {
 	//	SetPosicion(FVector(200, 200, 250)); 

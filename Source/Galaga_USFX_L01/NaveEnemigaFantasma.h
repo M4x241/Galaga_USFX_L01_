@@ -4,8 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "NaveEnemiga.h"
+#include "MovimientoRombo.h"
 #include "NaveEnemigaFantasma.generated.h"
-
+class UMovimientoRombo;
 /**
  * 
  */
@@ -15,6 +16,7 @@ class GALAGA_USFX_L01_API ANaveEnemigaFantasma : public ANaveEnemiga
 	GENERATED_BODY()
 private:
 	int tiempoInvisible;
+	UMovimientoRombo* movimientoRombo;
 
 public:
 	ANaveEnemigaFantasma(); 

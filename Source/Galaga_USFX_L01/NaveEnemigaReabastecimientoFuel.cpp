@@ -12,7 +12,7 @@ void ANaveEnemigaReabastecimientoFuel::Tick(float DeltaTime)
 
 void ANaveEnemigaReabastecimientoFuel::Mover(float DeltaTime)
 {
-	speed = -5;
+	/*speed = -5;
 	ANaveEnemigaReabastecimiento::Mover(DeltaTime);
 	SetActorLocation(FVector(GetActorLocation().X -2 , GetActorLocation().Y, GetActorLocation().Z + 1 * bandera));
 	if (GetActorLocation().Z>800 || GetActorLocation().Z<0) {
@@ -20,7 +20,7 @@ void ANaveEnemigaReabastecimientoFuel::Mover(float DeltaTime)
 	}
 	if (GetActorLocation().X < -1800) {
 		SetActorLocation(posicion);
-	}
+	}*/
 }
 
 void ANaveEnemigaReabastecimientoFuel::Destruirse()

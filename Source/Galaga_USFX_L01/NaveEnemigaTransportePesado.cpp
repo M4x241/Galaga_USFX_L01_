@@ -18,8 +18,8 @@ void ANaveEnemigaTransportePesado::Tick(float DeltaTime)
 
 void ANaveEnemigaTransportePesado::Mover(float DeltaTime)
 {
-	ANaveEnemigaTransporte::Mover(DeltaTime);
-	SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z));
+	/*ANaveEnemigaTransporte::Mover(DeltaTime);
+	SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z));*/
 }
 
 void ANaveEnemigaTransportePesado::Destruirse()

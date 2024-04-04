@@ -44,7 +44,7 @@ void EmptyLinkFunctionForGeneratedCodeActivacionBarrera() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UActivacionBarrera_Spawn_Statics::Function_MetaDataParams[] = {
-		{ "Category", "Cookbook" },
+		{ "Category", "Barrera" },
 		{ "Comment", "//se levantara la baerra:\n" },
 		{ "ModuleRelativePath", "ActivacionBarrera.h" },
 		{ "ToolTip", "se levantara la baerra:" },
@@ -84,7 +84,7 @@ void EmptyLinkFunctionForGeneratedCodeActivacionBarrera() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Galaga_USFX_L01,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UActivacionBarrera_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UActivacionBarrera_Spawn, "Spawn" }, // 2576434039
+		{ &Z_Construct_UFunction_UActivacionBarrera_Spawn, "Spawn" }, // 2007723884
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UActivacionBarrera_Statics::Class_MetaDataParams[] = {
@@ -132,7 +132,7 @@ void EmptyLinkFunctionForGeneratedCodeActivacionBarrera() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UActivacionBarrera, 1510943796);
+	IMPLEMENT_CLASS(UActivacionBarrera, 1587401111);
 	template<> GALAGA_USFX_L01_API UClass* StaticClass<UActivacionBarrera>()
 	{
 		return UActivacionBarrera::StaticClass();

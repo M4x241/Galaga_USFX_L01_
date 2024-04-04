@@ -19,7 +19,7 @@ void ANaveEnemigaNodrizaWar::Tick(float DeltaTime)
 
 void ANaveEnemigaNodrizaWar::Mover(float DeltaTime)
 {
-	ANaveEnemigaNodriza::Mover(DeltaTime);
+	/*ANaveEnemigaNodriza::Mover(DeltaTime);
 	if (ban) {
 		posicionale = rand() % 1600;
 		ban = false;
@@ -35,7 +35,7 @@ void ANaveEnemigaNodrizaWar::Mover(float DeltaTime)
 		else {
 			ban = true;
 		}
-	}
+	}*/
 }
 
 void ANaveEnemigaNodrizaWar::Disparar()

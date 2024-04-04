@@ -20,7 +20,7 @@ ANaveEnemigaNodrizaMadre::ANaveEnemigaNodrizaMadre()
 
 void ANaveEnemigaNodrizaMadre::Mover(float DeltaTime)
 {
-	ANaveEnemigaNodriza::Mover(DeltaTime);
+	/*ANaveEnemigaNodriza::Mover(DeltaTime);
 	if (ban) {
 		posicionale= rand() % 1600;
 		ban = false;
@@ -36,7 +36,7 @@ void ANaveEnemigaNodrizaMadre::Mover(float DeltaTime)
 		else {
 			ban = true;
 		}
-	}
+	}*/
 }
 
 void ANaveEnemigaNodrizaMadre::Disparar()

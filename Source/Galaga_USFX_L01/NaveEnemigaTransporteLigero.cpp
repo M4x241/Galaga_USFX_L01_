@@ -20,7 +20,7 @@ ANaveEnemigaTransporteLigero::ANaveEnemigaTransporteLigero()
 
 void ANaveEnemigaTransporteLigero::Mover(float DeltaTime)
 {
-	ANaveEnemigaTransporte::Mover(DeltaTime);
+	/*ANaveEnemigaTransporte::Mover(DeltaTime);
 	ban++;
 	if (ban>100) {
 		aleX = rand() % 1600;
@@ -30,7 +30,7 @@ void ANaveEnemigaTransporteLigero::Mover(float DeltaTime)
 
 	else {
 		SetActorLocation(FVector(aleX,aleY , GetActorLocation().Z));
-	}
+	}*/
 
 	//esto hace que las nave ligera se mueva a la posicion del pawn
 	/*

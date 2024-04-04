@@ -115,12 +115,6 @@
     <ClInclude Include="..\..\Source\Galaga_USFX_L01\mucionV2.h">
       <Filter>Source\Galaga_USFX_L01</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Galaga_USFX_L01\MyNaveEnemigaEspiaScout.cpp">
-      <Filter>Source\Galaga_USFX_L01</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Galaga_USFX_L01\MyNaveEnemigaEspiaScout.h">
-      <Filter>Source\Galaga_USFX_L01</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\Galaga_USFX_L01\NaveEnemiga.cpp">
       <Filter>Source\Galaga_USFX_L01</Filter>
     </ClCompile>

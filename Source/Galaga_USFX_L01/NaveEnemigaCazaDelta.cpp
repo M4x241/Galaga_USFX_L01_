@@ -21,7 +21,7 @@ ANaveEnemigaCazaDelta::ANaveEnemigaCazaDelta()
 
 void ANaveEnemigaCazaDelta::Mover(float DeltaTime)
 {
-	ANaveEnemigaCaza::Mover(DeltaTime);
+	/*ANaveEnemigaCaza::Mover(DeltaTime);
 	SetActorRotation(FRotator(0, 180, 0));
 	speed = 3;
 	SetActorLocation(FVector(GetActorLocation().X - speed, GetActorLocation().Y + speed * bandera, GetActorLocation().Z));
@@ -30,7 +30,7 @@ void ANaveEnemigaCazaDelta::Mover(float DeltaTime)
 	}
 	if (GetActorLocation().X < -1800) {
 		SetActorLocation(FVector(posicion));
-	}
+	}*/
 }
 
 void ANaveEnemigaCazaDelta::Disparar(FVector FireDirection)

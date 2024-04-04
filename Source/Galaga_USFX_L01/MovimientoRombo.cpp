@@ -32,12 +32,17 @@ void UMovimientoRombo::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 	// ...
 	AActor* Parent = GetOwner();
 	if (Parent) {
-		auto NewPos = Parent->GetActorLocation() +
-			FVector(FMath::FRandRange(-1, 1) * MoveRadio,
-				FMath::FRandRange(-1, 1) * MoveRadio,
-				FMath::FRandRange(-1, 1) * MoveRadio);
-		//actualizar la posicion
-		Parent->SetActorLocation(NewPos);
+		FVector PosicionActual = Parent->GetActorLocation();
+		FVector NuevaPosicion = FVector(PosicionActual.X - 100 * DeltaTime * 2, PosicionActual.Y + sin(PosicionActual.X / 180) * 8 * 2, PosicionActual.Z);
+
+		Parent->SetActorLocation(NuevaPosicion);
+
+
+		if (NuevaPosicion.X < -1600) {
+
+			Parent->SetActorLocation(FVector(1500.0f, PosicionActual.Y, 250.0f));
+
+		};
 
 	}
 }
