@@ -10,6 +10,7 @@
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/HighScore.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/InventarioComponent.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/Logros.cpp"
+#include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/MovimientoABase.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/MovimientoRombo.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/MovimientoZigZag.cpp"
 #include "C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/mucionV2.cpp"

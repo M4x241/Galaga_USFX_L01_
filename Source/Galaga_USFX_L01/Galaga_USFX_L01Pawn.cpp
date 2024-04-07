@@ -148,7 +148,50 @@ void AGalaga_USFX_L01Pawn::LanzamientoBomba()
 
 void AGalaga_USFX_L01Pawn::DisparoDoble()
 {
-	movimiento1->jumpPressed();
+	//movimiento1->jumpPressed();
+	/*GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("DisparoDoble: ") );
+	bCanFire = true;
+	FireShot(FVector(1, 0, 0));*/
+	FVector FireDirection = GetActorRotation().Vector();
+	if (FireDirection.SizeSquared() > 0.0f)
+	{
+		const FRotator FireRotation = FireDirection.Rotation() + FRotator(0.3, 0.3, 0.3); 
+		// Spawn projectile at an offset from this pawn
+		const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
+
+		UWorld* const World = GetWorld();
+		if (World != nullptr)
+		{
+			// spawn the projectile
+			//World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation, FireRotation);
+			if (int(FireDirection.X*10)==7 || int(FireDirection.X*10) == -7 )
+			{
+				FVector Direccion = FVector(int(FireDirection.X * 1.5), int(FireDirection.Y * 1.5), 0);
+				World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation + FVector(50 * abs(FireDirection.Y) * Direccion.X * -1,
+					50 * abs(FireDirection.X) * Direccion.Y, 0), FireRotation);
+				World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation - FVector(50 * abs(FireDirection.Y) * Direccion.X * -1,
+					50 * abs(FireDirection.X) * Direccion.Y, 0), FireRotation);
+			}
+			else
+			{
+				World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation + FVector(50 * FireDirection.Y, 50 *FireDirection.X, 0), FireRotation);
+				World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation - FVector(50 * FireDirection.Y, 50 *FireDirection.X, 0), FireRotation);
+			}
+			
+		}	
+
+		bCanFire = false;
+        World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AGalaga_USFX_L01Pawn::ShotTimerExpired, FireRate * 2);
+
+		// try and play the sound if specified
+		if (FireSound != nullptr)
+		{
+			UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+		}
+
+		bCanFire = false;
+	}
+
 }
 
 
@@ -167,7 +210,7 @@ void AGalaga_USFX_L01Pawn::SetupPlayerInputComponent(class UInputComponent* Play
 	FInputActionKeyMapping saltar("Saltar",EKeys::T, 0,0,0,0);
 	FInputActionKeyMapping teletransporte("Teletransporte", EKeys::F, 0, 0, 0, 0);
 	FInputActionKeyMapping acEscudo("ActivarEscudo", EKeys::K, 0, 0, 0, 0);
-	FInputActionKeyMapping dobleDisparo("DobleDisparo", EKeys::P, 0, 0, 0, 0);
+	FInputActionKeyMapping dobleDisparo("DobleDisparo", EKeys::J, 0, 0, 0, 0);
 	FInputActionKeyMapping lanzarBomba("LanzarBomba", EKeys::L, 0, 0, 0, 0);
 	FInputActionKeyMapping balaboomerang("BalaBoomerang", EKeys::H, 0, 0, 0, 0);
 		
@@ -242,6 +285,7 @@ void AGalaga_USFX_L01Pawn::FireShot(FVector FireDirection)
 		// If we are pressing fire stick in a direction
 		if (FireDirection.SizeSquared() > 0.0f)
 		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("FireDirection: ") + FireDirection.ToString());
 			const FRotator FireRotation = FireDirection.Rotation();
 			// Spawn projectile at an offset from this pawn
 			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
