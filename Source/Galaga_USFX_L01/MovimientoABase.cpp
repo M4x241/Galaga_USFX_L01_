@@ -38,6 +38,37 @@ void UMovimientoABase::GoRegresion(bool _iniciar, FVector puntoObjetivo,float De
 	}
 }
 
+void UMovimientoABase::jumpPressed()
+{
+	salto = true;
+	altMax = false;
+}
+
+void UMovimientoABase::ActionJump(float DeltaTime)
+{
+	if (salto) {
+		int velocidadZ = 1000;
+		AActor* parent = GetOwner();
+		if (!altMax) {
+			if (parent->GetActorLocation().Z <= 600) {
+				velocidadZ = 1000;
+			}
+			else {
+				altMax = true;
+			}
+		}
+		else {
+			velocidadZ = -400;
+			if (parent->GetActorLocation().Z <= 250) {
+				velocidadZ = 0;
+				salto = false;
+			}
+		}
+		
+		parent->SetActorLocation(FVector(int(parent->GetActorLocation().X), int(parent->GetActorLocation().Y), int(parent->GetActorLocation().Z) + velocidadZ * DeltaTime));
+	}
+}
+
 
 // Called when the game starts
 void UMovimientoABase::BeginPlay()
@@ -54,6 +85,7 @@ void UMovimientoABase::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	GoRegresion(iniciar,objetivo,DeltaTime);
+	ActionJump(DeltaTime);
 	// ...
 }
 

@@ -39,7 +39,7 @@ private:
 	int vida = 3;
 	AActor* logro1;
 	UActivacionBarrera* barrera1;
-	UMovimientoABase* movimiento1;
+	UMovimientoABase* movimiento1; //este movimiento tambien incluira el salto
 	//bool regresar = false;
 
 	/// definiendo teclas

@@ -15,10 +15,16 @@ class GALAGA_USFX_L01_API UMovimientoABase : public UActorComponent
 private:
 	bool iniciar = false;
 	FVector objetivo;
+
+	//salto
+	bool salto = false;
+	bool altMax = false;
 public:	
 	// Sets default values for this component's properties
 	UMovimientoABase();
 	void GoRegresion(bool _iniciar,FVector puntoObjetivo, float DeltaTime);
+	void jumpPressed();
+	void ActionJump(float DeltaTime);
 
 protected:
 	// Called when the game starts

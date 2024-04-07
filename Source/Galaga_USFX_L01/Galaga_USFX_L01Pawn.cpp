@@ -127,6 +127,7 @@ void AGalaga_USFX_L01Pawn::Teletransporte()
 
 void AGalaga_USFX_L01Pawn::Saltar()
 {
+	movimiento1->jumpPressed(); 
 }
 
 void AGalaga_USFX_L01Pawn::RegresionInicial()
@@ -142,10 +143,12 @@ void AGalaga_USFX_L01Pawn::ActivEscudo()
 
 void AGalaga_USFX_L01Pawn::LanzamientoBomba()
 {
+	movimiento1->jumpPressed();
 }
 
 void AGalaga_USFX_L01Pawn::DisparoDoble()
 {
+	movimiento1->jumpPressed();
 }
 
 
@@ -164,7 +167,7 @@ void AGalaga_USFX_L01Pawn::SetupPlayerInputComponent(class UInputComponent* Play
 	FInputActionKeyMapping saltar("Saltar",EKeys::T, 0,0,0,0);
 	FInputActionKeyMapping teletransporte("Teletransporte", EKeys::F, 0, 0, 0, 0);
 	FInputActionKeyMapping acEscudo("ActivarEscudo", EKeys::K, 0, 0, 0, 0);
-	FInputActionKeyMapping dobleDisparo("DobleDisparo", EKeys::J, 0, 0, 0, 0);
+	FInputActionKeyMapping dobleDisparo("DobleDisparo", EKeys::P, 0, 0, 0, 0);
 	FInputActionKeyMapping lanzarBomba("LanzarBomba", EKeys::L, 0, 0, 0, 0);
 	FInputActionKeyMapping balaboomerang("BalaBoomerang", EKeys::H, 0, 0, 0, 0);
 		
@@ -177,10 +180,10 @@ void AGalaga_USFX_L01Pawn::SetupPlayerInputComponent(class UInputComponent* Play
 	UPlayerInput::AddEngineDefinedActionMapping(balaboomerang);
 
 	//PlayerInputComponent->BindAction("Saltar", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::Elevar);
-	PlayerInputComponent->BindAction("BeginGame", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::RegresionInicial);
+	PlayerInputComponent->BindAction("BeginGame", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::RegresionInicial);//
 	PlayerInputComponent->BindAction("Saltar", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::Saltar); 
-	PlayerInputComponent->BindAction("Teletransporte", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::Teletransporte); 
-	PlayerInputComponent->BindAction("ActivarEscudo", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::ActivEscudo);
+	PlayerInputComponent->BindAction("Teletransporte", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::Teletransporte); //
+	PlayerInputComponent->BindAction("ActivarEscudo", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::ActivEscudo); //
 	PlayerInputComponent->BindAction("DobleDisparo", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::DisparoDoble); 
 	PlayerInputComponent->BindAction("LanzarBomba", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::LanzamientoBomba);//balaboormeran keys
 	PlayerInputComponent->BindAction("BalaBoomerang", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::Elevar);//balaboormeran keys
