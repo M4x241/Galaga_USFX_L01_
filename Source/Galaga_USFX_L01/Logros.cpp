@@ -97,8 +97,7 @@ void ALogros::BeginPlay()
 void ALogros::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	//CalcularPuntaje(nam,can);
-	ListarVida();
-	temporizador++;
+	//ListarVida();
+	//Stemporizador++;
 }
 

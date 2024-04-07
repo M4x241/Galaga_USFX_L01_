@@ -1,0 +1,145 @@
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_L01\Definitions.Galaga_USFX_L01.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/BarreraDeProteccion.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\BarreraDeProteccion.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\BarreraDeProteccion.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/Escenario.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Escenario.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Escenario.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/Evento.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Evento.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Evento.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/Galaga_USFX_L01.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Galaga_USFX_L01.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/Galaga_USFX_L01GameMode.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Galaga_USFX_L01GameMode.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\GeneradorNaves.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemiga.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Galaga_USFX_L01Pawn.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\InventarioComponent.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\mucionV2.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\mucionV2.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\InventarioComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerInput.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\GestureRecognizer.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\KeyState.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PlayerInput.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\ActivacionBarrera.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\ActivacionBarrera.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Logros.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Logros.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Galaga_USFX_L01Pawn.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemiga.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\GeneradorNaves.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Galaga_USFX_L01GameMode.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaTransporte.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaTransporte.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaCazaAlfa.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaCaza.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaCaza.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\MovimientoZigZag.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\MovimientoZigZag.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaCazaAlfa.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaCazaDelta.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaCazaDelta.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaTransporteLigero.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaTransporteLigero.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaTransportePesado.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaTransportePesado.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaEspiaScout.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaEspia.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaEspia.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaEspiaScout.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaEspiaCentral.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaEspiaCentral.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaReabastecimientoBombs.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaReabastecimiento.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaReabastecimiento.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaReabastecimientoBombs.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaReabastecimientoFuel.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaReabastecimientoFuel.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaNodrizaMadre.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaNodriza.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaNodriza.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaNodrizaMadre.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaNodrizaWar.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaNodrizaWar.generated.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\ProyectilEnemigo.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\ProyectilEnemigo.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/Galaga_USFX_L01Projectile.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\Galaga_USFX_L01Projectile.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Galaga_USFX_L01Projectile.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/GeneradorNaves.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/HighScore.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\HighScore.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\HighScore.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/InventarioComponent.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/MovimientoRombo.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\MovimientoRombo.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\MovimientoRombo.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/mucionV2.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemiga.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaAcrobata.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaAcrobata.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaAcrobata.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaCaza.cpp
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/SpringArmComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SpringArmComponent.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaCazaDelta.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaEscolta.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaEscolta.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaEscolta.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaEspia.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaEspiaCentral.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaEspiaScout.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaFantasma.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaFantasma.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaFantasma.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaGeneral.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaGeneral.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaGeneral.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaNodriza.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaNodrizaMadre.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaNodrizaWar.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaReabastecimiento.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaReabastecimientoBombs.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaReabastecimientoFuel.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaSenuelo.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaSenuelo.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaSenuelo.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaTransporte.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaTransporteLigero.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NaveEnemigaTransportePesado.cpp
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/NavesRestantes.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\NavesRestantes.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NavesRestantes.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/PlayerScore.cpp
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Source\Galaga_USFX_L01\PlayerScore.h
+C:\Users\maxro\OneDrive\Documentos\Unreal Projects\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\PlayerScore.generated.h
+C:/Users/maxro/OneDrive/Documentos/Unreal Projects/Galaga_USFX_L01/Source/Galaga_USFX_L01/ProyectilEnemigo.cpp

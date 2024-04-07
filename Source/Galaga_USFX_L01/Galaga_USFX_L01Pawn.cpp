@@ -65,6 +65,9 @@ AGalaga_USFX_L01Pawn::AGalaga_USFX_L01Pawn()
 		UE_LOG(LogTemp, Error, TEXT("No se pudo crear un objeto Logros."));
 	}*/
 
+	barrera1 = CreateDefaultSubobject<UActivacionBarrera>(TEXT("barrera")); 
+
+
 }
 
 void AGalaga_USFX_L01Pawn::DropItem()
@@ -103,6 +106,12 @@ void AGalaga_USFX_L01Pawn::RestarVida()
 	}
 
 }
+///					///////////////////////////////////////Seccion Metodos Activacion de Teclado
+void AGalaga_USFX_L01Pawn::Elevar() {
+	SetActorLocation(FVector(0,0,0));
+	MoveSpeed = 2000.0f;
+	GEngine->AddOnScreenDebugMessage(-5, 10.0f, FColor::Blue, TEXT("Entro: ") ); 
+}
 
 void AGalaga_USFX_L01Pawn::TakeItem(AmucionV2* InventoryItem)
 {
@@ -110,19 +119,75 @@ void AGalaga_USFX_L01Pawn::TakeItem(AmucionV2* InventoryItem)
 	MyInventory->AddToInventory(InventoryItem); 
 }
 
+void AGalaga_USFX_L01Pawn::Teletransporte()
+{
+	SetActorLocation(posicionNave);
+}
+
+void AGalaga_USFX_L01Pawn::Saltar()
+{
+}
+
+void AGalaga_USFX_L01Pawn::RegresionInicial()
+{
+}
+
+void AGalaga_USFX_L01Pawn::ActivEscudo()
+{
+	barrera1->Spawn(); 
+}
+
+void AGalaga_USFX_L01Pawn::LanzamientoBomba()
+{
+}
+
+void AGalaga_USFX_L01Pawn::DisparoDoble()
+{
+}
+
+
 void AGalaga_USFX_L01Pawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
 	check(PlayerInputComponent);
+	Super::SetupPlayerInputComponent(PlayerInputComponent);//revisar si es necesario
 
 	// set up gameplay key bindings
 	PlayerInputComponent->BindAxis(MoveForwardBinding);
 	PlayerInputComponent->BindAxis(MoveRightBinding);
 	PlayerInputComponent->BindAxis(FireForwardBinding);
 	PlayerInputComponent->BindAxis(FireRightBinding);
+	//# TECLAS PERSONALIZADAS
+	FInputActionKeyMapping Regresion("BeginGame", EKeys::G, 0, 0, 0, 0);
+	FInputActionKeyMapping saltar("Saltar",EKeys::T, 0,0,0,0);
+	FInputActionKeyMapping teletransporte("Teletransporte", EKeys::F, 0, 0, 0, 0);
+	FInputActionKeyMapping acEscudo("ActivarEscudo", EKeys::K, 0, 0, 0, 0);
+	FInputActionKeyMapping dobleDisparo("DobleDisparo", EKeys::J, 0, 0, 0, 0);
+	FInputActionKeyMapping lanzarBomba("LanzarBomba", EKeys::L, 0, 0, 0, 0);
+	FInputActionKeyMapping balaboomerang("BalaBoomerang", EKeys::H, 0, 0, 0, 0);
+		
+	UPlayerInput::AddEngineDefinedActionMapping(Regresion);
+	UPlayerInput::AddEngineDefinedActionMapping(saltar); 
+	UPlayerInput::AddEngineDefinedActionMapping(teletransporte);
+	UPlayerInput::AddEngineDefinedActionMapping(acEscudo); 
+	UPlayerInput::AddEngineDefinedActionMapping(dobleDisparo);
+	UPlayerInput::AddEngineDefinedActionMapping(lanzarBomba);
+	UPlayerInput::AddEngineDefinedActionMapping(balaboomerang);
+
+	//PlayerInputComponent->BindAction("Saltar", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::Elevar);
+	PlayerInputComponent->BindAction("BeginGame", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::RegresionInicial);
+	PlayerInputComponent->BindAction("Saltar", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::Saltar); 
+	PlayerInputComponent->BindAction("Teletransporte", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::Teletransporte); 
+	PlayerInputComponent->BindAction("ActivarEscudo", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::ActivEscudo);
+	PlayerInputComponent->BindAction("DobleDisparo", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::DisparoDoble); 
+	PlayerInputComponent->BindAction("LanzarBomba", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::LanzamientoBomba);//balaboormeran keys
+	PlayerInputComponent->BindAction("BalaBoomerang", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::Elevar);//balaboormeran keys
+
+
 
 
 	PlayerInputComponent->BindAction("menuinventario", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::DropItem);
 }
+
 
 void AGalaga_USFX_L01Pawn::Tick(float DeltaSeconds)
 {
@@ -200,4 +265,11 @@ void AGalaga_USFX_L01Pawn::ShotTimerExpired()
 {
 	bCanFire = true;
 }
+
+void AGalaga_USFX_L01Pawn::BeginPlay()
+{
+	Super::BeginPlay();
+	posicionNave = GetActorLocation(); 
+}
+
 

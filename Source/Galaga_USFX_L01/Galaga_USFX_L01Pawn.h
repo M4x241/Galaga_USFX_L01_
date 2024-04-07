@@ -6,8 +6,11 @@
 #include "GameFramework/Character.h"
 #include "InventarioComponent.h"
 #include "mucionV2.h"
+#include "GameFramework/PlayerInput.h"//revisar el player controler
+#include "ActivacionBarrera.h"
 #include "Logros.h" 
 #include "Galaga_USFX_L01Pawn.generated.h"
+class UActivacionBarrera;
 
 UCLASS(Blueprintable)
 class AGalaga_USFX_L01Pawn : public APawn
@@ -33,6 +36,10 @@ private:
 	FVector posicionNave;
 	int vida = 3;
 	AActor* logro1;
+	UActivacionBarrera* barrera1;
+
+	/// definiendo teclas
+
 	
 public:
 	FORCEINLINE FVector GetPosicionNave() const { return GetActorLocation(); }
@@ -41,7 +48,16 @@ public:
 	FORCEINLINE void SetLogro(ALogros* _logro) { logro1 = _logro; }
 	//FORCEINLINE ALogros* GetLogro() { return logro1; }
 	void RestarVida();
+	// # FUNCIONES DE TECLAS	
+	void Elevar();
+	FORCEINLINE void RegresionInicial();
+	FORCEINLINE void Saltar();
 
+	FORCEINLINE void Teletransporte();
+	FORCEINLINE void ActivEscudo();
+	FORCEINLINE void DisparoDoble(); 
+	
+	FORCEINLINE void LanzamientoBomba();  
 
 
 	//===========================
@@ -66,7 +82,6 @@ public:
 	
 public:
 	AGalaga_USFX_L01Pawn();
-
 	/** Offset from the ships location to spawn projectiles */
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite )
 	FVector GunOffset;
@@ -107,6 +122,8 @@ private:
 
 	/** Handle for efficient management of ShotTimerExpired timer */
 	FTimerHandle TimerHandle_ShotTimerExpired;
+protected:
+	virtual void BeginPlay() override;
 
 public:
 	/** Returns ShipMeshComponent subobject **/

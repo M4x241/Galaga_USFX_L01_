@@ -4,8 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "NaveEnemigaCaza.h"
+#include "MovimientoZigZag.h"
 #include "NaveEnemigaCazaAlfa.generated.h"
-
+class UMovimientoZigZag;
 /**
  * 
  */
@@ -20,6 +21,7 @@ private:
 	int banderaA=3;
 	UPROPERTY(VisibleAnywhere);
 	FVector posicionalfa;
+	UMovimientoZigZag* MovimientoZigZag;
 public:
 	virtual void Tick(float DeltaTime) override;
 	ANaveEnemigaCazaAlfa();

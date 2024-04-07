@@ -25,8 +25,9 @@ ANaveEnemigaCazaAlfa::ANaveEnemigaCazaAlfa()
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/Meshes/EnemyLevel4.EnemyLevel4'"));
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 	posicionalfa = GetActorLocation();
-	//posicion = FVector(1200, -1000, 250);
-
+	
+	MovimientoZigZag = CreateDefaultSubobject<UMovimientoZigZag>(TEXT("Movimiento ZigZag"));
+	MovimientoZigZag->Iniciando(GetPosicion());
 	//****************************##############################################ERROR
 	//PrimaryActorTick.bCanEverTick = true; ///esta cosa al activarla en la hija de la hija es que no se puede 
 }
