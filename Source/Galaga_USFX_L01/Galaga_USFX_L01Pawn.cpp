@@ -12,7 +12,6 @@
 #include "Engine/StaticMesh.h"
 #include "Kismet/GameplayStatics.h"
 #include "Sound/SoundBase.h"
-#include "Logros.h"
 
 const FName AGalaga_USFX_L01Pawn::MoveForwardBinding("MoveForward");
 const FName AGalaga_USFX_L01Pawn::MoveRightBinding("MoveRight");
@@ -66,6 +65,8 @@ AGalaga_USFX_L01Pawn::AGalaga_USFX_L01Pawn()
 	}*/
 
 	barrera1 = CreateDefaultSubobject<UActivacionBarrera>(TEXT("barrera")); 
+	movimiento1 = CreateDefaultSubobject<UMovimientoABase>(TEXT("movimiento"));  
+	//posicionInicial = GetActorLocation();
 
 
 }
@@ -121,7 +122,7 @@ void AGalaga_USFX_L01Pawn::TakeItem(AmucionV2* InventoryItem)
 
 void AGalaga_USFX_L01Pawn::Teletransporte()
 {
-	SetActorLocation(posicionNave);
+	SetActorLocation(posicionInicial);
 }
 
 void AGalaga_USFX_L01Pawn::Saltar()
@@ -130,6 +131,8 @@ void AGalaga_USFX_L01Pawn::Saltar()
 
 void AGalaga_USFX_L01Pawn::RegresionInicial()
 {
+	movimiento1->GoRegresion(true, posicionInicial,0);
+		
 }
 
 void AGalaga_USFX_L01Pawn::ActivEscudo()
@@ -269,7 +272,8 @@ void AGalaga_USFX_L01Pawn::ShotTimerExpired()
 void AGalaga_USFX_L01Pawn::BeginPlay()
 {
 	Super::BeginPlay();
-	posicionNave = GetActorLocation(); 
+	//posicionInicial = GetActorLocation(); 
+	posicionInicial = FVector(int(GetActorLocation().X), int(GetActorLocation().Y), int(GetActorLocation().Z));
 }
 
 

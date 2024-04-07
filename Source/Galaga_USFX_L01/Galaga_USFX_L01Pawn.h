@@ -8,9 +8,11 @@
 #include "mucionV2.h"
 #include "GameFramework/PlayerInput.h"//revisar el player controler
 #include "ActivacionBarrera.h"
+#include "MovimientoABase.h"
 #include "Logros.h" 
 #include "Galaga_USFX_L01Pawn.generated.h"
 class UActivacionBarrera;
+class UMovimientoABase;
 
 UCLASS(Blueprintable)
 class AGalaga_USFX_L01Pawn : public APawn
@@ -32,11 +34,13 @@ class AGalaga_USFX_L01Pawn : public APawn
 	//AGREGANDO SACAR VALOR DE LA POSICON
 	
 private:
-
-	FVector posicionNave;
+	UPROPERTY(VisibleAnywhere)
+	FVector posicionInicial;
 	int vida = 3;
 	AActor* logro1;
 	UActivacionBarrera* barrera1;
+	UMovimientoABase* movimiento1;
+	//bool regresar = false;
 
 	/// definiendo teclas
 
