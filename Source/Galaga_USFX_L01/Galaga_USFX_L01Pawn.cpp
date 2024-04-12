@@ -12,6 +12,7 @@
 #include "Engine/StaticMesh.h"
 #include "Kismet/GameplayStatics.h"
 #include "Sound/SoundBase.h"
+#include "NaveEnemiga.h"
 
 const FName AGalaga_USFX_L01Pawn::MoveForwardBinding("MoveForward");
 const FName AGalaga_USFX_L01Pawn::MoveRightBinding("MoveRight");
@@ -65,8 +66,8 @@ AGalaga_USFX_L01Pawn::AGalaga_USFX_L01Pawn()
 	}*/
 
 	barrera1 = CreateDefaultSubobject<UActivacionBarrera>(TEXT("barrera")); 
-	movimiento1 = CreateDefaultSubobject<UMovimientoABase>(TEXT("movimiento"));  
-	//posicionInicial = GetActorLocation();
+	movimiento1 = CreateDefaultSubobject<UMovimientoABase>(TEXT("movimiento"));
+	colision1 = CreateDefaultSubobject<UColisionType>(TEXT("colision"));
 
 
 }
@@ -92,6 +93,28 @@ void AGalaga_USFX_L01Pawn::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other,
 	{
 		TakeItem(InventoryItem);
 	}
+	else {//destruira de acuerdo al valor de vida, la colision cambia
+		//mostrar mensaje en pantalla de la vida actual del jugador
+		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("TipoColision: ")+ FString::FromInt(vida));
+		AActor* zombie = Cast<AActor>(Other); 
+		if (zombie != nullptr)
+		{
+			colision1->SetActorObjetivo(zombie);
+			//colision1->SetTypeControl(vida);
+		}
+		
+	}
+}
+
+void AGalaga_USFX_L01Pawn::NotifyActorBeginOverlap(AActor* OtherActor)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Coilision: "));
+}
+
+void AGalaga_USFX_L01Pawn::BeginOverlap(UPrimitiveComponent* Comp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("colis: "));
+
 }
 
 void AGalaga_USFX_L01Pawn::RestarVida()
@@ -112,6 +135,25 @@ void AGalaga_USFX_L01Pawn::Elevar() {
 	SetActorLocation(FVector(0,0,0));
 	MoveSpeed = 2000.0f;
 	GEngine->AddOnScreenDebugMessage(-5, 10.0f, FColor::Blue, TEXT("Entro: ") ); 
+}
+
+void AGalaga_USFX_L01Pawn::CamaraCambio()
+{
+	typecamara *= -1;
+	if (typecamara==-1) {
+		CameraBoom->TargetArmLength = 0.f;
+		CameraBoom->SetRelativeRotation(FRotator(-80.f, 0.f, 0.f));
+		CameraComponent->bUsePawnControlRotation = false;
+		//CameraBoom->SetRelativeRotation(FRotator(0, -90, 0));
+		//CameraComponent->location
+	}
+	else {
+		CameraBoom->TargetArmLength = 1200.f;
+		CameraBoom->SetRelativeRotation(FRotator(-80.f, 0.f, 0.f));
+		CameraBoom->bDoCollisionTest = false;
+		//volver la camara a la original
+
+	}
 }
 
 void AGalaga_USFX_L01Pawn::TakeItem(AmucionV2* InventoryItem)
@@ -146,6 +188,11 @@ void AGalaga_USFX_L01Pawn::LanzamientoBomba()
 	movimiento1->jumpPressed();
 }
 
+void AGalaga_USFX_L01Pawn::Destruir() //llama al metodo colision de la clase colisionType
+{
+	colision1->IncrementarTypeControl(); 
+}
+
 void AGalaga_USFX_L01Pawn::DisparoDoble()
 {
 	//movimiento1->jumpPressed();
@@ -153,44 +200,47 @@ void AGalaga_USFX_L01Pawn::DisparoDoble()
 	bCanFire = true;
 	FireShot(FVector(1, 0, 0));*/
 	FVector FireDirection = GetActorRotation().Vector();
-	if (FireDirection.SizeSquared() > 0.0f)
-	{
-		const FRotator FireRotation = FireDirection.Rotation() + FRotator(0.3, 0.3, 0.3); 
-		// Spawn projectile at an offset from this pawn
-		const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
-
-		UWorld* const World = GetWorld();
-		if (World != nullptr)
+	if (bCanFire) {
+		if (FireDirection.SizeSquared() > 0.0f)
 		{
-			// spawn the projectile
-			//World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation, FireRotation);
-			if (int(FireDirection.X*10)==7 || int(FireDirection.X*10) == -7 )
-			{
-				FVector Direccion = FVector(int(FireDirection.X * 1.5), int(FireDirection.Y * 1.5), 0);
-				World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation + FVector(50 * abs(FireDirection.Y) * Direccion.X * -1,
-					50 * abs(FireDirection.X) * Direccion.Y, 0), FireRotation);
-				World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation - FVector(50 * abs(FireDirection.Y) * Direccion.X * -1,
-					50 * abs(FireDirection.X) * Direccion.Y, 0), FireRotation);
-			}
-			else
-			{
-				World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation + FVector(50 * FireDirection.Y, 50 *FireDirection.X, 0), FireRotation);
-				World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation - FVector(50 * FireDirection.Y, 50 *FireDirection.X, 0), FireRotation);
-			}
-			
-		}	
+			const FRotator FireRotation = FireDirection.Rotation() + FRotator(0.3, 0.3, 0.3);
+			// Spawn projectile at an offset from this pawn
+			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
 
-		bCanFire = false;
-        World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AGalaga_USFX_L01Pawn::ShotTimerExpired, FireRate * 2);
+			UWorld* const World = GetWorld();
+			if (World != nullptr)
+			{
+				// spawn the projectile
+				//World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation, FireRotation);
+				if (int(FireDirection.X * 10) == 7 || int(FireDirection.X * 10) == -7)
+				{
+					FVector Direccion = FVector(int(FireDirection.X * 1.5), int(FireDirection.Y * 1.5), 0);
+					World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation + FVector(50 * abs(FireDirection.Y) * Direccion.X * -1,
+						50 * abs(FireDirection.X) * Direccion.Y, 0), FireRotation);
+					World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation - FVector(50 * abs(FireDirection.Y) * Direccion.X * -1,
+						50 * abs(FireDirection.X) * Direccion.Y, 0), FireRotation);
+				}
+				else
+				{
+					World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation + FVector(50 * FireDirection.Y, 50 * FireDirection.X, 0), FireRotation);
+					World->SpawnActor<AGalaga_USFX_L01Projectile>(SpawnLocation - FVector(50 * FireDirection.Y, 50 * FireDirection.X, 0), FireRotation);
+				}
 
-		// try and play the sound if specified
-		if (FireSound != nullptr)
-		{
-			UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+			}
+
+			bCanFire = false;
+			World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AGalaga_USFX_L01Pawn::ShotTimerExpired, FireRate * 2, false);
+
+			// try and play the sound if specified
+			if (FireSound != nullptr)
+			{
+				UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+			}
+
+			bCanFire = false;
 		}
-
-		bCanFire = false;
 	}
+	
 
 }
 
@@ -205,6 +255,22 @@ void AGalaga_USFX_L01Pawn::SetupPlayerInputComponent(class UInputComponent* Play
 	PlayerInputComponent->BindAxis(MoveRightBinding);
 	PlayerInputComponent->BindAxis(FireForwardBinding);
 	PlayerInputComponent->BindAxis(FireRightBinding);
+	//Movimiento diagonal
+	FInputActionKeyMapping diagonalE("DiagonalE", EKeys::Q, 0, 0, 0, 0);
+	FInputActionKeyMapping diagonalQ("DiagonalQ", EKeys::E, 0, 0, 0, 0);
+	FInputActionKeyMapping diagonalZ("DiagonalZ", EKeys::Z, 0, 0, 0, 0);
+	FInputActionKeyMapping diagonalX("DiagonalX", EKeys::X, 0, 0, 0, 0);
+
+	UPlayerInput::AddEngineDefinedActionMapping(diagonalE);
+	UPlayerInput::AddEngineDefinedActionMapping(diagonalQ);
+	UPlayerInput::AddEngineDefinedActionMapping(diagonalZ);
+	UPlayerInput::AddEngineDefinedActionMapping(diagonalX);
+	//PlayerInputComponent->BindAxis("DiagonalE",)
+
+	PlayerInputComponent->BindAxis("DiagonalE");
+	PlayerInputComponent->BindAxis("DiagonalQ");
+	PlayerInputComponent->BindAxis("DiagonalZ");
+	PlayerInputComponent->BindAxis("DiagonalX");
 	//# TECLAS PERSONALIZADAS
 	FInputActionKeyMapping Regresion("BeginGame", EKeys::G, 0, 0, 0, 0);
 	FInputActionKeyMapping saltar("Saltar",EKeys::T, 0,0,0,0);
@@ -231,7 +297,16 @@ void AGalaga_USFX_L01Pawn::SetupPlayerInputComponent(class UInputComponent* Play
 	PlayerInputComponent->BindAction("LanzarBomba", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::LanzamientoBomba);//balaboormeran keys
 	PlayerInputComponent->BindAction("BalaBoomerang", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::Elevar);//balaboormeran keys
 
+	//botones de colision
+	FInputActionKeyMapping destruir("Destruir", EKeys::O, 0, 0, 0, 0);
+	UPlayerInput::AddEngineDefinedActionMapping(destruir);
+	PlayerInputComponent->BindAction("Destruir", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::Destruir);
 
+
+	//botones de camara
+	FInputActionKeyMapping camara("CamaraFirst", EKeys::P, 0, 0, 0, 0);
+	UPlayerInput::AddEngineDefinedActionMapping(camara);
+	PlayerInputComponent->BindAction("CamaraFirst", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::CamaraCambio);
 
 
 	PlayerInputComponent->BindAction("menuinventario", EInputEvent::IE_Pressed, this, &AGalaga_USFX_L01Pawn::DropItem);
@@ -247,6 +322,9 @@ void AGalaga_USFX_L01Pawn::Tick(float DeltaSeconds)
 	const float ForwardValue = GetInputAxisValue(MoveForwardBinding);
 	const float RightValue = GetInputAxisValue(MoveRightBinding);
 
+	//const float diagE = GetInputAxisValue("DiagonalE");
+	//const float DiagonalX = GetInputAxisValue(MoveRightBinding);
+
 	// Clamp max size so that (X=1, Y=1) doesn't cause faster movement in diagonal directions
 	const FVector MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
 
@@ -257,6 +335,7 @@ void AGalaga_USFX_L01Pawn::Tick(float DeltaSeconds)
 	if (Movement.SizeSquared() > 0.0f)
 	{
 		const FRotator NewRotation = Movement.Rotation();
+		//CameraComponent->SetRelativeRotation(NewRotation);
 		FHitResult Hit(1.f);
 		RootComponent->MoveComponent(Movement, NewRotation, true, &Hit);
 		
@@ -267,7 +346,6 @@ void AGalaga_USFX_L01Pawn::Tick(float DeltaSeconds)
 			RootComponent->MoveComponent(Deflection, NewRotation, true);
 		}
 	}
-	
 	// Create fire direction vector
 	const float FireForwardValue = GetInputAxisValue(FireForwardBinding);
 	const float FireRightValue = GetInputAxisValue(FireRightBinding);
@@ -275,6 +353,9 @@ void AGalaga_USFX_L01Pawn::Tick(float DeltaSeconds)
 
 	// Try and fire a shot
 	FireShot(FireDirection);
+	if (typecamara == -1) {
+		CameraBoom->SetRelativeRotation(FRotator(0,90,0));
+	}
 }
 
 void AGalaga_USFX_L01Pawn::FireShot(FVector FireDirection)
@@ -285,7 +366,7 @@ void AGalaga_USFX_L01Pawn::FireShot(FVector FireDirection)
 		// If we are pressing fire stick in a direction
 		if (FireDirection.SizeSquared() > 0.0f)
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("FireDirection: ") + FireDirection.ToString());
+			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("FireDirection: ") + FireDirection.ToString());
 			const FRotator FireRotation = FireDirection.Rotation();
 			// Spawn projectile at an offset from this pawn
 			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
@@ -321,6 +402,7 @@ void AGalaga_USFX_L01Pawn::BeginPlay()
 	Super::BeginPlay();
 	//posicionInicial = GetActorLocation(); 
 	posicionInicial = FVector(int(GetActorLocation().X), int(GetActorLocation().Y), int(GetActorLocation().Z));
+	//ColissionSphere->OnComponentBeginOverlap.AddDynamic(this, &AGalaga_USFX_L01Pawn::BeginOverlap); 
 }
 
 

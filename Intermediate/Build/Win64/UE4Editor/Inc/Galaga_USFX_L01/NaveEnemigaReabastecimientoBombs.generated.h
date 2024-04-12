@@ -60,7 +60,11 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANaveEnemigaReabastecimientoBombs)
 
 
-#define Galaga_USFX_L01_Source_Galaga_USFX_L01_NaveEnemigaReabastecimientoBombs_h_15_PRIVATE_PROPERTY_OFFSET
+#define Galaga_USFX_L01_Source_Galaga_USFX_L01_NaveEnemigaReabastecimientoBombs_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__AleX() { return STRUCT_OFFSET(ANaveEnemigaReabastecimientoBombs, AleX); } \
+	FORCEINLINE static uint32 __PPO__AleY() { return STRUCT_OFFSET(ANaveEnemigaReabastecimientoBombs, AleY); }
+
+
 #define Galaga_USFX_L01_Source_Galaga_USFX_L01_NaveEnemigaReabastecimientoBombs_h_12_PROLOG
 #define Galaga_USFX_L01_Source_Galaga_USFX_L01_NaveEnemigaReabastecimientoBombs_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

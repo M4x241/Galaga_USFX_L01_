@@ -73,6 +73,7 @@ void AGalaga_USFX_L01GameMode::BeginPlay()
 
 		///spwn proyectil
 		proyectil = World->SpawnActor<AProyectilEnemigo>(FVector(-1600,-500,250), rotacionNave);
+		NaveEnemigaTBoms = World->SpawnActor<ANaveEnemigaReabastecimientoBombs>(FVector(300, -900, 1500), rotacionNave);
 
 		FVector posicionNave = FVector(rand() % 1000-500, rand() % 1000-500, 200);
 		//se generan aleatoriamente las naves enemigas

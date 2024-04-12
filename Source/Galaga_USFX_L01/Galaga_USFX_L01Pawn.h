@@ -9,10 +9,12 @@
 #include "GameFramework/PlayerInput.h"//revisar el player controler
 #include "ActivacionBarrera.h"
 #include "MovimientoABase.h"
+#include "ColisionType.h"
 #include "Logros.h" 
 #include "Galaga_USFX_L01Pawn.generated.h"
 class UActivacionBarrera;
 class UMovimientoABase;
+class UColisionType;
 
 UCLASS(Blueprintable)
 class AGalaga_USFX_L01Pawn : public APawn
@@ -40,9 +42,11 @@ private:
 	AActor* logro1;
 	UActivacionBarrera* barrera1;
 	UMovimientoABase* movimiento1; //este movimiento tambien incluira el salto
+	UColisionType* colision1;
 	//bool regresar = false;
 
-	/// definiendo teclas
+	/// typo de colision
+	//int typeColision = 0; // 0 = defecto, 1 = destruccion, 2 = control, 3 = autodestruccion, 4 = invencible
 
 	
 public:
@@ -63,7 +67,8 @@ public:
 	
 	FORCEINLINE void LanzamientoBomba();  
 
-
+	FORCEINLINE void Destruir();
+	FORCEINLINE void CamaraCambio(); 
 	//===========================
 	UPROPERTY()
 	UInventarioComponent* MyInventory;
@@ -83,7 +88,13 @@ public:
 		bool bSelfMoved, FVector HitLocation, FVector
 		HitNormal, FVector NormalImpulse, const FHitResult&
 		Hit) override;
+	//colisiones
 	
+	void BeginOverlap(UPrimitiveComponent* Comp,AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
+	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
+	//aqui agremos algunas variables mas
+	int typecamara=1;
+
 public:
 	AGalaga_USFX_L01Pawn();
 	/** Offset from the ships location to spawn projectiles */

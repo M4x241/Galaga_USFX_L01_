@@ -25,6 +25,7 @@ public:
 	void GoRegresion(bool _iniciar,FVector puntoObjetivo, float DeltaTime);
 	void jumpPressed();
 	void ActionJump(float DeltaTime);
+	//void MovimientoDiagonal(float Deltatime);
 
 protected:
 	// Called when the game starts

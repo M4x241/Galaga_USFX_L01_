@@ -15,10 +15,20 @@ class GALAGA_USFX_L01_API ANaveEnemigaReabastecimientoBombs : public ANaveEnemig
 	GENERATED_BODY()
 private:
 	int CantidadBombas;
-	float bandera = 1;
+	float tmpSuelto = 3;
+	float tmpBomb=0;
+	bool soltar = false;
+	UPROPERTY(VisibleAnywhere)
+	int AleX;
+	UPROPERTY(VisibleAnywhere)
+	int AleY;
 public:
 	virtual void Tick(float DeltaTime) override;
 	FORCEINLINE int GetCantidadBombas() const { return CantidadBombas; }
+	void soltarBomba(bool _soltar);
+	
+
+	 
 
 	FORCEINLINE void SetCantidadBombas(int _CantidadBombas) { CantidadBombas = _CantidadBombas; }
 protected:
