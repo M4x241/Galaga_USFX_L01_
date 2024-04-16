@@ -23,7 +23,7 @@ AGalaga_USFX_L01GameMode::AGalaga_USFX_L01GameMode()
 {
 	// set default pawn class to our character class
 	DefaultPawnClass = AGalaga_USFX_L01Pawn::StaticClass();
-
+	GeneradorNaves01 = CreateDefaultSubobject<UGeneradorNaves>(TEXT("GeneradorNaves01")); 
 	//GeneradorNaves01 = CreateDefaultSubobject<UGeneradorNaves>(TEXT("GeneradorNaves01"));
 }
 
@@ -60,126 +60,17 @@ void AGalaga_USFX_L01GameMode::BeginPlay()
 		//quiero inicializar las naves enemigas
 
 
-		ANaveEnemigaCazaAlfa* NaveEnemigaTAlfa;
-		ANaveEnemigaCazaDelta* NaveEnemigaTDelta;
-		ANaveEnemigaTransporteLigero* NaveEnemigaTLigero;
-		ANaveEnemigaTransportePesado* NaveEnemigaTPesado;
-		ANaveEnemigaEspiaScout* NaveEnemigaTScout ;
-		ANaveEnemigaEspiaCentral* NaveEnemigaTCentral ;
-		ANaveEnemigaNodrizaMadre* NaveEnemigaTMadre;
-		ANaveEnemigaNodrizaWar* NaveEnemigaTWar ;
-		ANaveEnemigaReabastecimientoFuel* NaveEnemigaTFuel ;
-		ANaveEnemigaReabastecimientoBombs* NaveEnemigaTBoms;
+		
 
 		///spwn proyectil
+		ANaveEnemigaReabastecimientoBombs* NaveEnemigaTBoms;
 		proyectil = World->SpawnActor<AProyectilEnemigo>(FVector(-1600,-500,250), rotacionNave);
 		NaveEnemigaTBoms = World->SpawnActor<ANaveEnemigaReabastecimientoBombs>(FVector(300, -900, 1500), rotacionNave);
 
-		FVector posicionNave = FVector(rand() % 1000-500, rand() % 1000-500, 200);
+		
 		//se generan aleatoriamente las naves enemigas
-		int tipNave = 0;
-		for (int i = 0; i < 4;i++) {
-			tipNave = rand() % 9;
-			
-			switch (tipNave) {
-			case 0:
-				 
-				//quiero enviar el tipo de actor como parametro
-				//GeneradorNaves01->generarNave(NaveEnemigaTAlfa->GetClass(), posicionNave);
-				for (int j = 0; j < 6; j++) {
-					NaveEnemigaTAlfa = World->SpawnActor<ANaveEnemigaCazaAlfa>(posicionNave+FVector(150 *i,200*j,0), rotacionNave);
-					TANaveEnemigamix.Push(NaveEnemigaTAlfa);
-				}
-				 
-				break;
-			case 1:
-				//NaveEnemigaTDelta = World->SpawnActor<ANaveEnemigaCazaDelta>(posicionNave, rotacionNave); 
-				//GeneradorNaves01->generarNave(NaveEnemigaTDelta->GetClass(), posicionNave);
-				for (int j = 0; j < 6; j++) {
-					NaveEnemigaTDelta = World->SpawnActor<ANaveEnemigaCazaDelta>(posicionNave + FVector(150 * i, 200 * j, 0), rotacionNave);
-					TANaveEnemigamix.Push(NaveEnemigaTDelta);
-				}
-				break;
-			case 2:
-				//NaveEnemigaTLigero = World->SpawnActor<ANaveEnemigaTransporteLigero>(posicionNave, rotacionNave); 
-				//GeneradorNaves01->generarNave(NaveEnemigaTLigero->GetClass(), posicionNave);
-				for (int j = 0; j < 6; j++) {
-					NaveEnemigaTLigero = World->SpawnActor<ANaveEnemigaTransporteLigero>(posicionNave + FVector(150 * i, 200 * j, 0), rotacionNave);
-					TANaveEnemigamix.Push(NaveEnemigaTLigero);
-				}
-				break;
-			case 3:
-				//NaveEnemigaTPesado = World->SpawnActor<ANaveEnemigaTransportePesado>(posicionNave, rotacionNave); 
-				//GeneradorNaves01->generarNave(NaveEnemigaTPesado->GetClass() , posicionNave);
-				for (int j = 0; j < 6; j++) {
-					NaveEnemigaTPesado = World->SpawnActor<ANaveEnemigaTransportePesado>(posicionNave + FVector(150 * i, 200 * j, 0), rotacionNave);
-					TANaveEnemigamix.Push(NaveEnemigaTPesado);
-				}
-				break;
-			case 4:
-				//NaveEnemigaTScout = World->SpawnActor<ANaveEnemigaEspiaScout>(posicionNave, rotacionNave);  
-				//GeneradorNaves01->generarNave(NaveEnemigaTScout->GetClass() , posicionNave);
-				for (int j = 0; j < 6; j++) {
-					NaveEnemigaTScout = World->SpawnActor<ANaveEnemigaEspiaScout>(posicionNave + FVector(150 * i, 200 * j, 0), rotacionNave);
-					TANaveEnemigamix.Push(NaveEnemigaTScout);
-				}
-				break;
-			case 5:
-				//NaveEnemigaTCentral = World->SpawnActor<ANaveEnemigaEspiaCentral>(posicionNave, rotacionNave); 
-				//GeneradorNaves01->generarNave(NaveEnemigaTCentral->GetClass(), posicionNave);
-				for (int j = 0; j < 6; j++) {
-					NaveEnemigaTCentral = World->SpawnActor<ANaveEnemigaEspiaCentral>(posicionNave + FVector(150 * i, 200 * j, 0), rotacionNave);
-					TANaveEnemigamix.Push(NaveEnemigaTCentral);
-				}
-				break;
-			case 6:
-				//NaveEnemigaTMadre = World->SpawnActor<ANaveEnemigaNodrizaMadre>(posicionNave, rotacionNave);
-				//GeneradorNaves01->generarNave(NaveEnemigaTMadre->GetClass(), posicionNave);
-				//TANaveEnemigamix.Push(NaveEnemigaTMadre);
-				for (int j = 0; j < 6; j++) {
-					NaveEnemigaTMadre = World->SpawnActor<ANaveEnemigaNodrizaMadre>(posicionNave + FVector(150 * i, 200 * j, 0), rotacionNave);
-					TANaveEnemigamix.Push(NaveEnemigaTMadre);
-				}
-				break;
-			case 7:
-				//NaveEnemigaTWar = World->SpawnActor<ANaveEnemigaNodrizaWar>(posicionNave, rotacionNave);
-				//GeneradorNaves01->generarNave(NaveEnemigaTWar->GetClass(), posicionNave);
-				//TANaveEnemigamix.Push(NaveEnemigaTWar);
-				for (int j = 0; j < 6; j++) {
-					NaveEnemigaTWar = World->SpawnActor<ANaveEnemigaNodrizaWar>(posicionNave + FVector(150 * i, 200 * j, 0), rotacionNave);
-					TANaveEnemigamix.Push(NaveEnemigaTWar);
-				}
-				break;
-			case 8:
-				//NaveEnemigaTFuel = World->SpawnActor<ANaveEnemigaReabastecimientoFuel>(posicionNave, rotacionNave); 
-				//GeneradorNaves01->generarNave(NaveEnemigaTFuel->GetClass() , posicionNave);
-				//TANaveEnemigamix.Push(NaveEnemigaTFuel);
-				for (int j = 0; j < 6; j++) {
-					NaveEnemigaTFuel = World->SpawnActor<ANaveEnemigaReabastecimientoFuel>(posicionNave + FVector(150 * i, 200 * j, 0), rotacionNave);
-					TANaveEnemigamix.Push(NaveEnemigaTFuel);
-				}
-				break;
-			case 9:
-				//NaveEnemigaTBoms = World->SpawnActor<ANaveEnemigaReabastecimientoBombs>(posicionNave, rotacionNave);
-				//GeneradorNaves01->generarNave(NaveEnemigaTBoms->GetClass(), posicionNave);
-				//TANaveEnemigamix.Push(NaveEnemigaTBoms); 
-				for (int j = 0; j < 6; j++) {
-					NaveEnemigaTBoms = World->SpawnActor<ANaveEnemigaReabastecimientoBombs>(posicionNave + FVector(150 * i, 200 * j, 0), rotacionNave);
-					TANaveEnemigamix.Push(NaveEnemigaTBoms);
-				}
-				break;
-			default: break;
-
-			}
-		}
-		TiempoTranscurrido = 0;
+		GeneradorNaves01->generarNave(); 
 		
 	}
-
-	//NaveEnemigaCaza01->SetPosicion(FVector(-500.0f, 500.0f, 200.0f));
-	//NaveEnemigaTransporte01->SetPosicion(FVector(500.0f, -500.0f, 200.0f));
-	//NaveEnemigaCazaAlfa01->SetPosicion(FVector(-500.0f, 500.0f, 200.0f));
-	//NaveEnemigaCazaDelta01->SetPosicion(FVector(-500.0f, 500.0f, 200.0f));
-	//NaveEnemigaTransporte01->SetPosicion(FVector(500.0f, -500.0f, 200.0f));
 }
 

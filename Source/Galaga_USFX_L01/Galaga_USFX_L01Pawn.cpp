@@ -141,17 +141,21 @@ void AGalaga_USFX_L01Pawn::CamaraCambio()
 {
 	typecamara *= -1;
 	if (typecamara==-1) {
+		//camara en primera persona
 		CameraBoom->TargetArmLength = 0.f;
 		CameraBoom->SetRelativeRotation(FRotator(-80.f, 0.f, 0.f));
 		CameraComponent->bUsePawnControlRotation = false;
-		//CameraBoom->SetRelativeRotation(FRotator(0, -90, 0));
-		//CameraComponent->location
+		
+
+		
+
 	}
 	else {
 		CameraBoom->TargetArmLength = 1200.f;
 		CameraBoom->SetRelativeRotation(FRotator(-80.f, 0.f, 0.f));
 		CameraBoom->bDoCollisionTest = false;
-		//volver la camara a la original
+		CameraComponent->SetRelativeLocation(FVector(0.f, 0.f, 500.f));
+		CameraBoom->bEnableCameraLag = true;
 
 	}
 }
@@ -338,7 +342,9 @@ void AGalaga_USFX_L01Pawn::Tick(float DeltaSeconds)
 		//CameraComponent->SetRelativeRotation(NewRotation);
 		FHitResult Hit(1.f);
 		RootComponent->MoveComponent(Movement, NewRotation, true, &Hit);
-		
+		if (typecamara == -1) {
+			CameraBoom->SetRelativeRotation(NewRotation); 
+		}
 		if (Hit.IsValidBlockingHit())
 		{
 			const FVector Normal2D = Hit.Normal.GetSafeNormal2D();
@@ -353,9 +359,7 @@ void AGalaga_USFX_L01Pawn::Tick(float DeltaSeconds)
 
 	// Try and fire a shot
 	FireShot(FireDirection);
-	if (typecamara == -1) {
-		CameraBoom->SetRelativeRotation(FRotator(0,90,0));
-	}
+	
 }
 
 void AGalaga_USFX_L01Pawn::FireShot(FVector FireDirection)

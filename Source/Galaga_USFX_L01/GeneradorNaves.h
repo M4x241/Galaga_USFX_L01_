@@ -16,11 +16,14 @@ class GALAGA_USFX_L01_API UGeneradorNaves : public USceneComponent
 public:	
 	// Sets default values for this component's properties
 	UGeneradorNaves();
-	FORCEINLINE void generarNave(UClass* claseEnemiga, FVector posicion);
+	FORCEINLINE void generarNave();
+	FORCEINLINE void NotEnemy();
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
-
+private:
+	TArray<ANaveEnemiga*> TANaveEnemigamix;
+	int level=1	;
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;

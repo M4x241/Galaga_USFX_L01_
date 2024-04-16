@@ -49,7 +49,6 @@ public:
 	TArray<ANaveEnemigaCazaDelta*> TANaveEnemigaCazaDelta;
 	TArray<ANaveEnemigaTransporte*> TANaveEnemigaTransporte;
 
-	TArray<ANaveEnemiga*> TANaveEnemigamix;
 
 	ANaveEnemigaCaza* NaveEnemigaCaza01;
 	

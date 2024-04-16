@@ -16,7 +16,7 @@ class AGalaga_USFX_L01Projectile : public AActor
 public:
 	bool enemigo=false; 
 private:
-	/** Sphere collision component */
+	/** Sphere collision component */ 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* ProjectileMesh;
 
